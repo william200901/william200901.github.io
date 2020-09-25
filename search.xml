@@ -19,7 +19,7 @@
 <p>public 文件夹是生成的所有静态文件，html、css、js文件以及图片等。这个文件夹是博客被Node.js渲染后生成的最终文件夹。</p>
 <h3 id="将hexo博客部署到GitHub上"><a href="#将hexo博客部署到GitHub上" class="headerlink" title="将hexo博客部署到GitHub上"></a>将hexo博客部署到GitHub上</h3><p>具体操作见参考文章</p>
 <h3 id="写博客"><a href="#写博客" class="headerlink" title="写博客"></a>写博客</h3><p>在hexo根目录执行gitbash命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo new &quot;博客名&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo new &lt;postname&gt;</span><br></pre></td></tr></table></figure>
 <p>就可以在<code>hexo/source/_posts</code> 文件夹下新建一个<code>.md</code>文件，即markdown文件，写博客只需本地编辑该文件。</p>
 <p>将本地更新上传到GitHub上，使用命令：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo clean &amp;&amp; hexo g $$ hexo deploy</span><br></pre></td></tr></table></figure>
@@ -40,11 +40,50 @@
 <h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><a href="https://blog.bestzuo.cn/posts/blog-establish.html">Hexo博客+Next主题深度优化与定制</a><br><a href="http://yearito.cn/posts/hexo-advanced-settings.html">Hexo 搭建个人博客系列：进阶设置篇</a><br><a href="https://github.com/stevenjoezhang/live2d-widget">把萌萌哒的看板娘抱回家 (ノ≧∇≦)ノ | Live2D widget for web platform</a></p>
 ]]></content>
       <categories>
-        <category>method</category>
+        <category>technology</category>
       </categories>
       <tags>
         <tag>hexo</tag>
         <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vue-cli脚手架+Element-ui 前端开发</title>
+    <url>/2020/09/25/vue-cli-Element-%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA/</url>
+    <content><![CDATA[<h1 id="开发环境搭建"><a href="#开发环境搭建" class="headerlink" title="开发环境搭建"></a>开发环境搭建</h1><h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><ul>
+<li>需要提前安装Node.js</li>
+<li>使用npm（需要node环境）全局安装webpack</li>
+<li>推荐安装Git，Git用处挺大，有机会单独写写关于Git的使用经验</li>
+<li>编辑器推荐VS Code</li>
+</ul>
+<p>webpack 4.X开始，需要安装webpack-cli依赖，故使用以下命令同时安装webpack和webpack-cli:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install webpack webpack-cli -g</span><br></pre></td></tr></table></figure>
+<p>安装成功后，输入命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">webpack -v</span><br></pre></td></tr></table></figure>
+<p>显示出webpack的版本号则表示安装成功<br><br><br>有了webpack-dev-server 的支持，可以启动一个请求服务器，为你搭建一个测试环境，可以在线调试</p>
+<h2 id="安装vue-cli"><a href="#安装vue-cli" class="headerlink" title="安装vue-cli"></a>安装vue-cli</h2><p>安装好上述的webpack后，全局安装vue-cli，在cmd（或gitbash）中输入命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --global vue-cli</span><br></pre></td></tr></table></figure>
+<p>安装完成后，使用命令查看vue-cli版本(注意命令中的-V为大写)：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vue -V</span><br></pre></td></tr></table></figure>
+<p>成功显示出版本号则表示安装成功<br><br><br>打开C:\Users\Andminster\AppData\Roaming\npm 目录可以看见圈出部分，说明已安装好：</p>
+<p><img src="/images/myBlog-vuecli-1.png"></p>
+<h2 id="用vue-cli构建新项目"><a href="#用vue-cli构建新项目" class="headerlink" title="用vue-cli构建新项目"></a>用vue-cli构建新项目</h2><ol>
+<li>在F盘新建一个文件夹vueProj,用来存放项目，cd命令进入该文件夹，执行命令： <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vue init webpack test</span><br></pre></td></tr></table></figure>
+ 之后会跳出一系列选项，可以一直回车确认，选择默认项，但是否使用ESLint一项建议选择no（ESLint是一款检查代码错误和规范的插件，但因为太严格，所以不推荐使用）<br> 选项确认完毕后就开始构建项目了</li>
+<li>项目构建完成后，cd命令<code>cd test</code>进入项目文件夹，使用下面命令可以安装全部项目依赖 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+ 但使用<code>vue init webpack test</code>命令构建项目以及选择了安装全部依赖选项，故不必再执行上述命令。<br> 安装好后的文件夹如下:<br> <img src="/images/myBlog-vuecli-2.png"></li>
+<li>在项目根目录test下，运行命令： <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
+ 然后会开启一个本服务器，按地址访问即可看见初始的helloworld界面。</li>
+</ol>
+<p>至此，最经典的helloworld示例便完成了。</p>
+<h1 id="上手新项目的流程"><a href="#上手新项目的流程" class="headerlink" title="上手新项目的流程"></a>上手新项目的流程</h1><h1 id="踩过的坑"><a href="#踩过的坑" class="headerlink" title="踩过的坑"></a>踩过的坑</h1><h1 id="使用该框架构建前端页面的知识积累"><a href="#使用该框架构建前端页面的知识积累" class="headerlink" title="使用该框架构建前端页面的知识积累"></a>使用该框架构建前端页面的知识积累</h1><h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1>]]></content>
+      <categories>
+        <category>technology</category>
+      </categories>
+      <tags>
+        <tag>vue-cli</tag>
+        <tag>element-ui</tag>
+        <tag>前端</tag>
       </tags>
   </entry>
 </search>
