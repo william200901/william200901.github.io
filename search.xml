@@ -24,6 +24,10 @@
 <p>将本地更新上传到GitHub上，使用命令：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo clean &amp;&amp; hexo g $$ hexo deploy</span><br></pre></td></tr></table></figure>
 
+<h2 id="写博客遇到的坑"><a href="#写博客遇到的坑" class="headerlink" title="写博客遇到的坑"></a>写博客遇到的坑</h2><ol>
+<li>md文件最上的title内容不能带引号，否则会出错</li>
+<li>关于图片的引用不能推送至github：下载个插件，修改下_config.yml。详情google</li>
+</ol>
 <h2 id="主题-amp-功能配置"><a href="#主题-amp-功能配置" class="headerlink" title="主题&amp;功能配置"></a>主题&amp;功能配置</h2><h3 id="关于配置文件的说明"><a href="#关于配置文件的说明" class="headerlink" title="关于配置文件的说明"></a>关于配置文件的说明</h3><p>使用到的有2个配置文件：hexo文件夹下的<code>_config.yml</code>配置文件；主题中的配置文件<code>hexo\themes\next6\_config.yml</code>，其中next6为下载的主题文件夹名称。</p>
 <h3 id="下载安装Next主题"><a href="#下载安装Next主题" class="headerlink" title="下载安装Next主题"></a>下载安装Next主题</h3><p>我使用的是Next6版本，下载地址：<a href="https://github.com/theme-next/hexo-theme-next">https://github.com/theme-next/hexo-theme-next</a><br>将下载好的主题放在<code>F:\blog\hexo\themes\</code>下面。</p>
 <h3 id="设置主题为Next主题"><a href="#设置主题为Next主题" class="headerlink" title="设置主题为Next主题"></a>设置主题为Next主题</h3><p>站点根目录的配置文件<code>_config.yml</code>中，修改主题名：</p>
