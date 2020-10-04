@@ -80,7 +80,24 @@
  然后会开启一个本服务器，按地址访问即可看见初始的helloworld界面。</li>
 </ol>
 <p>至此，最经典的helloworld示例便完成了。</p>
-<h1 id="上手新项目的流程"><a href="#上手新项目的流程" class="headerlink" title="上手新项目的流程"></a>上手新项目的流程</h1><h1 id="踩过的坑"><a href="#踩过的坑" class="headerlink" title="踩过的坑"></a>踩过的坑</h1><h1 id="使用该框架构建前端页面的知识积累"><a href="#使用该框架构建前端页面的知识积累" class="headerlink" title="使用该框架构建前端页面的知识积累"></a>使用该框架构建前端页面的知识积累</h1><h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1>]]></content>
+<h1 id="上手新项目的流程"><a href="#上手新项目的流程" class="headerlink" title="上手新项目的流程"></a>上手新项目的流程</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vue init webpack proj</span><br></pre></td></tr></table></figure>
+<p>使用该命令创建包含路由的项目proj。<br><br></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm i element-ui -S</span><br></pre></td></tr></table></figure>
+<p>使用此命令全局安装element-ui模块。</p>
+<p>之后在main.js文件导入element组件和样式表，并使用ElementUI。即加入以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import ElementUI from &#39;element-ui&#39;;</span><br><span class="line">import &#39;element-ui&#x2F;lib&#x2F;theme-chalk&#x2F;index.css&#39;;</span><br><span class="line"></span><br><span class="line">Vue.use(ElementUI);</span><br></pre></td></tr></table></figure>
+<p>至此新项目便成功创建了。之后在<a href="https://element.eleme.cn/#/zh-CN/component/layout">element官网</a>中寻找所需组件复制粘贴即可构建自己需要的网页。</p>
+<p>项目中应该会使用到axios插件(与post和get相关的)，此时需要使用命令<code>npm install --save axios</code>来安装该模块，之后在需要使用该模块的vue文件的&lt;script&gt;中加入:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import axios from &#39;axios&#39;</span><br></pre></td></tr></table></figure>
+<h1 id="踩过的坑"><a href="#踩过的坑" class="headerlink" title="踩过的坑"></a>踩过的坑</h1><p>踩的坑挺多，简要提下：</p>
+<ol>
+<li><p><code>vue create my-app</code>，命令创建新项目。这种方式创建默认没有router。使用该方式新建项目使用<code>npm run serve</code>运行本地服务器</p>
+</li>
+<li><p>app.vue或者路由的index.js文件，对其他vue页面有引用，如果引用路径不对，或者vue页面名字不对，会报找不到模块的错误</p>
+</li>
+</ol>
+<h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><p><a href="https://www.cnblogs.com/ming1025/p/9887247.html">vue-cli（vue脚手架）超详细教程</a></p>
+]]></content>
       <categories>
         <category>technology</category>
       </categories>
