@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Some Pictures</title>
+    <url>/2020/09/25/some-pictures/</url>
+    <content><![CDATA[<p><img src="/2020/09/25/some-pictures/1.jpg"><br><br><br><img src="/2020/09/25/some-pictures/6.jpg"><br><br><br><img src="/2020/09/25/some-pictures/15.png"><br><br><br><img src="/2020/09/25/some-pictures/16.jpg"><br><br><br><img src="/2020/09/25/some-pictures/28.png"><br><br><br><img src="/2020/09/25/some-pictures/63.png"><br><br><br><img src="/2020/09/25/some-pictures/70.png"></p>
+]]></content>
+      <categories>
+        <category>resource</category>
+      </categories>
+      <tags>
+        <tag>picture</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Bulid Blog With Hexo</title>
     <url>/2020/09/22/build-blog/</url>
     <content><![CDATA[<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><p>安装环境为win10；<br>安装hexo框架，需要先安装该框架的依赖环境：<br>1.hexo<br>2.Git</p>
