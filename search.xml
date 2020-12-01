@@ -94,8 +94,8 @@
 <p>至此，最经典的helloworld示例便完成了。</p>
 <h1 id="上手新项目的流程"><a href="#上手新项目的流程" class="headerlink" title="上手新项目的流程"></a>上手新项目的流程</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vue init webpack proj</span><br></pre></td></tr></table></figure>
 <p>使用该命令创建包含路由的项目proj。<br><br></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm i element-ui -g</span><br></pre></td></tr></table></figure>
-<p>使用此命令全局安装element-ui模块。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm i element-ui -s</span><br></pre></td></tr></table></figure>
+<p>使用此命令安装element-ui模块。</p>
 <p>之后在main.js文件导入element组件和样式表，并使用ElementUI。即加入以下代码：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import ElementUI from &#39;element-ui&#39;;</span><br><span class="line">import &#39;element-ui&#x2F;lib&#x2F;theme-chalk&#x2F;index.css&#39;;</span><br><span class="line"></span><br><span class="line">Vue.use(ElementUI);</span><br></pre></td></tr></table></figure>
 <p>至此新项目便成功创建了。之后在<a href="https://element.eleme.cn/#/zh-CN/component/layout">element官网</a>中寻找所需组件复制粘贴即可构建自己需要的网页。</p>
