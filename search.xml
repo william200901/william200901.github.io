@@ -94,7 +94,7 @@
 <p>至此，最经典的helloworld示例便完成了。</p>
 <h1 id="上手新项目的流程"><a href="#上手新项目的流程" class="headerlink" title="上手新项目的流程"></a>上手新项目的流程</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vue init webpack proj</span><br></pre></td></tr></table></figure>
 <p>使用该命令创建包含路由的项目proj。<br><br></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm i element-ui -S</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm i element-ui -g</span><br></pre></td></tr></table></figure>
 <p>使用此命令全局安装element-ui模块。</p>
 <p>之后在main.js文件导入element组件和样式表，并使用ElementUI。即加入以下代码：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import ElementUI from &#39;element-ui&#39;;</span><br><span class="line">import &#39;element-ui&#x2F;lib&#x2F;theme-chalk&#x2F;index.css&#39;;</span><br><span class="line"></span><br><span class="line">Vue.use(ElementUI);</span><br></pre></td></tr></table></figure>
@@ -117,6 +117,27 @@
         <tag>vue-cli</tag>
         <tag>element-ui</tag>
         <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vuejs-learn</title>
+    <url>/2020/11/23/vuejs-learn/</url>
+    <content><![CDATA[<h2 id="一些有用的工具"><a href="#一些有用的工具" class="headerlink" title="一些有用的工具"></a>一些有用的工具</h2><h3 id="Chrome插件"><a href="#Chrome插件" class="headerlink" title="Chrome插件"></a>Chrome插件</h3><p>Vue.js devtools:开发vue.js非常有用</p>
+<p>AdBlock：屏蔽广告，真心好用</p>
+<p>minerBlock:防止电脑被人恶意当作挖矿机使用</p>
+<h3 id="VScode插件"><a href="#VScode插件" class="headerlink" title="VScode插件"></a>VScode插件</h3><p>vscode-icons</p>
+<p>ESlint</p>
+<p>Vetur</p>
+<p>Beautify</p>
+<p>Markdown Preview Enhanced</p>
+<p>One Dark Pro</p>
+<p>Solarized-light Theme</p>
+]]></content>
+      <categories>
+        <category>techlonogy</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
       </tags>
   </entry>
 </search>
