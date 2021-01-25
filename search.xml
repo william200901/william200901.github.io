@@ -140,4 +140,21 @@
         <tag>vue</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Word 2019 使用记录</title>
+    <url>/2021/01/25/word-use/</url>
+    <content><![CDATA[<h2 id="1-使用环境"><a href="#1-使用环境" class="headerlink" title="1.使用环境"></a>1.使用环境</h2><p>微软家庭学生版2019</p>
+<h2 id="2-使用上的问题"><a href="#2-使用上的问题" class="headerlink" title="2.使用上的问题"></a>2.使用上的问题</h2><h3 id="2-1显示格式"><a href="#2-1显示格式" class="headerlink" title="2.1显示格式"></a>2.1显示格式</h3><p>word文档复制粘贴，或者有时的自动格式一下就把整个排版弄的乱七八糟，真很让人心烦。而且格式符实际也是占位置的，所以不如显示出格式符，看的反而更清晰。</p>
+<p>1）依次点击：文件–&gt;选项，得到word选项框，如图：<br><img src="/2021/01/25/word-use/1.png"><br><img src="/2021/01/25/word-use/2.png"><br><img src="/2021/01/25/word-use/3.png"></p>
+<p>2)在word选项框中选择<code>自定义功能区</code>，左侧的选择命令位置设置为<code>不在功能区的命令</code>，在左侧找到<code>显示格式</code>一项，如图：<br><img src="/2021/01/25/word-use/4.png"></p>
+<p>3)在右侧选择视图，在其下<code>新建组</code>，<code>重命名</code>为“我添加的功能”，点击<code>添加</code>按钮，最后看到图中第5步显示便表名添加成功了(也不一定要在视图组下新建，可以按自己需求选择在合适的组下创建)，添加完成后点击确定返回就可以了，操作如图：<br><img src="/2021/01/25/word-use/5.png"></p>
+<p>4)回到word文档中，选择视图下，我添加的功能，其中便有显示格式了，打开后可以在显示格式窗口中勾选显示所有格式标记，至此，该问题便得到了解决，操作如图：<br><img src="/2021/01/25/word-use/6.png"><br><img src="/2021/01/25/word-use/7.png"></p>
+]]></content>
+      <categories>
+        <category>technology</category>
+      </categories>
+      <tags>
+        <tag>word</tag>
+      </tags>
+  </entry>
 </search>
