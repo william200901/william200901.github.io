@@ -177,4 +177,188 @@
         <tag>word</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Grammer of Markdown</title>
+    <url>/2021/02/25/Grammer-of-Markdown/</url>
+    <content><![CDATA[<p><strong>2021.2.25</strong></p>
+<p>hexo的markdown文件中，description部分用英文中括号修饰会报错。</p>
+<hr>
+<h1 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World!"></a>Hello World!</h1><h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h1 id="一级"><a href="#一级" class="headerlink" title="一级"></a>一级</h1><h2 id="二级"><a href="#二级" class="headerlink" title="二级"></a>二级</h2><h3 id="三级"><a href="#三级" class="headerlink" title="三级"></a>三级</h3><h4 id="四级"><a href="#四级" class="headerlink" title="四级"></a>四级</h4><h5 id="五级"><a href="#五级" class="headerlink" title="五级"></a>五级</h5><h6 id="六级"><a href="#六级" class="headerlink" title="六级"></a>六级</h6><p><em>斜体文本</em></p>
+<p><em>斜体文本</em>   </p>
+<p><strong>粗体文本</strong></p>
+<p><strong>粗体文本</strong></p>
+<p><strong><em>斜粗体文本</em></strong></p>
+<p><strong><em>斜粗体文本</em></strong></p>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<p><del><strong>delete line</strong></del></p>
+<p><u>下划线</u></p>
+<p>脚注[^脚注]<br>[^脚注]脚注</p>
+<hr>
+<ul>
+<li>first</li>
+<li>second</li>
+<li>third  </li>
+</ul>
+<ul>
+<li>first</li>
+<li>second</li>
+<li>third</li>
+</ul>
+<ul>
+<li>first</li>
+<li>second</li>
+<li>third  </li>
+</ul>
+<ol>
+<li>first</li>
+<li>second</li>
+<li>third  </li>
+</ol>
+<p>换行  </p>
+<p>换行  </p>
+<blockquote>
+<p>最外</p>
+<blockquote>
+<p>第二</p>
+<blockquote>
+<p>第三</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>区块用链表</p>
+<ol>
+<li>第一</li>
+<li>第二</li>
+<li>第三</li>
+</ol>
+<ul>
+<li>第一</li>
+<li>第二</li>
+</ul>
+</blockquote>
+<ul>
+<li><p>第一项</p>
+<blockquote>
+<p>区块<br>区块</p>
+</blockquote>
+</li>
+<li><p>第二项</p>
+<blockquote>
+<p>区块</p>
+</blockquote>
+</li>
+</ul>
+<p><code>printf()</code>函数</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">include &lt;stdio.h&gt;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;hello world&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">include &lt;stdio.h&gt;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;helloworld&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">helloworld</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(<span class="keyword">char</span> argv[],<span class="keyword">int</span> argc)</span></span>&#123;</span><br><span class="line">		System.out.println(<span class="string">&quot;helloworld&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><a href="https://www.bilibili.com/">a link</a><br><a href="https://www.bilibili.com/">https://www.bilibili.com</a></p>
+<p>用1作网址变量<a href="https://www.bilibili.com/">bilibili</a><br>用字符串作网址变量<a href="https://www.zhihu.com/">zhihu</a><br><strong>文档结尾给变量赋值（网址）</strong></p>
+<p><img src="http://static.runoob.com/images/runoob-logo.png" alt="RUNOOB 图标"></p>
+<p><img src="http://static.runoob.com/images/runoob-logo.png" alt="RUNOOB 图标" title="RUNOOB"></p>
+<p>这个链接用 1 作为网址变量 <a href="https://www.bilibili.com/">RUNOOB</a>.<br>然后在文档的结尾为变量赋值（网址）</p>
+<img src="http://static.runoob.com/images/runoob-logo.png" width="50%">
+
+
+<table>
+<thead>
+<tr>
+<th>表头</th>
+<th>表头</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+<tr>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">左对齐</th>
+<th align="right">右对齐</th>
+<th align="center">居中对齐</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">单元格</td>
+<td align="right">单元格</td>
+<td align="center">单元格</td>
+</tr>
+<tr>
+<td align="left">单元格</td>
+<td align="right">单元格</td>
+<td align="center">单元格</td>
+</tr>
+</tbody></table>
+<p>$$<br>\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix}<br>\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \<br>\frac{\partial X}{\partial u} &amp;  \frac{\partial Y}{\partial u} &amp; 0 \<br>\frac{\partial X}{\partial v} &amp;  \frac{\partial Y}{\partial v} &amp; 0 \<br>\end{vmatrix}<br>${$tep1}{\style{visibility:hidden}{(x+1)(x+1)}}<br>$$</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">graph LR</span><br><span class="line">A[方形] --&gt;B(圆角)</span><br><span class="line">    B --&gt; C&#123;条件a&#125;</span><br><span class="line">    C --&gt;|a&#x3D;1| D[结果1]</span><br><span class="line">    C --&gt;|a&#x3D;2| E[结果2]</span><br><span class="line">    F[横向流程图]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">graph TD</span><br><span class="line">A[方形] --&gt; B(圆角)</span><br><span class="line">    B --&gt; C&#123;条件a&#125;</span><br><span class="line">    C --&gt; |a&#x3D;1| D[结果1]</span><br><span class="line">    C --&gt; |a&#x3D;2| E[结果2]</span><br><span class="line">    F[竖向流程图]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">st&#x3D;&gt;start: 开始框</span><br><span class="line">op&#x3D;&gt;operation: 处理框</span><br><span class="line">cond&#x3D;&gt;condition: 判断框(是或否?)</span><br><span class="line">sub1&#x3D;&gt;subroutine: 子流程</span><br><span class="line">io&#x3D;&gt;inputoutput: 输入输出框</span><br><span class="line">e&#x3D;&gt;end: 结束框</span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;io-&gt;e</span><br><span class="line">cond(no)-&gt;sub1(right)-&gt;op</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">st&#x3D;&gt;start: 开始框</span><br><span class="line">op&#x3D;&gt;operation: 处理框</span><br><span class="line">cond&#x3D;&gt;condition: 判断框(是或否?)</span><br><span class="line">sub1&#x3D;&gt;subroutine: 子流程</span><br><span class="line">io&#x3D;&gt;inputoutput: 输入输出框</span><br><span class="line">e&#x3D;&gt;end: 结束框</span><br><span class="line">st(right)-&gt;op(right)-&gt;cond</span><br><span class="line">cond(yes)-&gt;io(bottom)-&gt;e</span><br><span class="line">cond(no)-&gt;sub1(right)-&gt;op</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">对象A-&gt;对象B: 对象B你好吗?（请求）</span><br><span class="line">Note right of 对象B: 对象B的描述</span><br><span class="line">Note left of 对象A: 对象A的描述(提示)</span><br><span class="line">对象B--&gt;对象A: 我很好(响应)</span><br><span class="line">对象A-&gt;对象B: 你真的好吗？</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Title: 标题：复杂使用</span><br><span class="line">对象A-&gt;对象B: 对象B你好吗?（请求）</span><br><span class="line">Note right of 对象B: 对象B的描述</span><br><span class="line">Note left of 对象A: 对象A的描述(提示)</span><br><span class="line">对象B--&gt;对象A: 我很好(响应)</span><br><span class="line">对象B-&gt;小三: 你好吗</span><br><span class="line">小三--&gt;&gt;对象A: 对象B找我了</span><br><span class="line">对象A-&gt;对象B: 你真的好吗？</span><br><span class="line">Note over 小三,对象B: 我们是朋友</span><br><span class="line">participant C</span><br><span class="line">Note right of C: 没人陪我玩</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">%% 时序图例子,-&gt; 直线，--&gt;虚线，-&gt;&gt;实线箭头</span><br><span class="line">  sequenceDiagram</span><br><span class="line">    participant 张三</span><br><span class="line">    participant 李四</span><br><span class="line">    张三-&gt;王五: 王五你好吗？</span><br><span class="line">    loop 健康检查</span><br><span class="line">        王五-&gt;王五: 与疾病战斗</span><br><span class="line">    end</span><br><span class="line">    Note right of 王五: 合理 食物 &lt;br&#x2F;&gt;看医生...</span><br><span class="line">    李四--&gt;&gt;张三: 很好!</span><br><span class="line">    王五-&gt;李四: 你怎么样?</span><br><span class="line">    李四--&gt;王五: 很好!</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">%% 语法示例</span><br><span class="line">        gantt</span><br><span class="line">        dateFormat  YYYY-MM-DD</span><br><span class="line">        title 软件开发甘特图</span><br><span class="line">        section 设计</span><br><span class="line">        需求                      :done,    des1, 2014-01-06,2014-01-08</span><br><span class="line">        原型                      :active,  des2, 2014-01-09, 3d</span><br><span class="line">        UI设计                     :         des3, after des2, 5d</span><br><span class="line">    未来任务                     :         des4, after des3, 5d</span><br><span class="line">        section 开发</span><br><span class="line">        学习准备理解需求                      :crit, done, 2014-01-06,24h</span><br><span class="line">        设计框架                             :crit, done, after des2, 2d</span><br><span class="line">        开发                                 :crit, active, 3d</span><br><span class="line">        未来任务                              :crit, 5d</span><br><span class="line">        耍                                   :2d</span><br><span class="line">        section 测试</span><br><span class="line">        功能测试                              :active, a1, after des3, 3d</span><br><span class="line">        压力测试                               :after a1  , 20h</span><br><span class="line">        测试报告                               : 48h</span><br></pre></td></tr></table></figure>
+
+
+]]></content>
+      <categories>
+        <category>technology</category>
+      </categories>
+      <tags>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>The Secret of Memory</title>
+    <url>/2021/02/25/The-Secret-of-Memory/</url>
+    <content><![CDATA[<p><img src="/2021/02/25/The-Secret-of-Memory/The-Secret-of-Memory.jpg"></p>
+<h2 id="总体观感"><a href="#总体观感" class="headerlink" title="总体观感"></a>总体观感</h2><p>这本书先介绍了记忆法的历史，之后提到了现在的一些记忆术，其中讲了很多实验，但是无论是实验还是故事的描述都不够清晰，实验过程也许需要更多时间去体会，毕竟是他人花费心力设计的实验，总不至于草草略读便可以理解。</p>
+<p>还不够细致的读完一遍后，了解到了古代的地点记忆法；之后的数字-字母、数字-图像编码等方式，感觉现在来看并不实用；书后也有讲到很多关于记忆的内容。最后得出的结论则是，不管采用什么技巧，记忆终归是要符合遗忘规律的，为使大脑保持灵光，最好的办法就是尝试各种不同的活动，多刺激大脑了。</p>
+<h2 id="记忆法的历史"><a href="#记忆法的历史" class="headerlink" title="记忆法的历史"></a>记忆法的历史</h2><p><strong>古代地点记忆法：</strong></p>
+<p>西蒙尼德斯的传说：古希腊诗人西蒙尼德斯曾受邀在一场宴会上作诗，他诗中的一部分包含了对双子神卡斯托尔和波鲁克斯的赞美，而这不被其他人接受，因此说好的稿费也只能拿到一半，说是另一半稿费应该找双子神去要。可怜的西蒙尼德斯只好退居一旁。稍后，门童来报，门外有两个年轻男子有事找西蒙尼德斯。西蒙尼德斯出去后却没有见到任何人。同时，西蒙尼德斯刚走出宴会厅时，厅堂便轰然倒塌，其他人都被砸死，面目全非，来收尸的家属也无法辨认。而西蒙尼德斯却发现他记得每个人的位置和特征，于是他根据座位告诉收尸者哪一位是他们的亲人······</p>
+<blockquote>
+<p>这便是地点记忆法的手段。地点记忆法是利用心里熟知的一幅地图，将需要记忆的内容与地图关联起来。回想这条路线图时，我们便可以有序的回想其与之关联的内容。</p>
+</blockquote>
+<h2 id="记忆术"><a href="#记忆术" class="headerlink" title="记忆术"></a>记忆术</h2><p>短时记忆只有20秒中，7个记忆存储，虽没办法提升，但可以使用技巧提高记忆能力，如分类记忆。</p>
+<p>关于人的记忆，阿兹海默病是指老年痴呆，忘掉过去是逆行性记忆障碍，而确实存在着只记得过去发生的事情，会忘掉事故后短时间发生的事情的病例，这是顺行性记忆障碍。</p>
+<p>记忆有两种：程序性记忆和陈述性记忆。程序性记忆，如学习骑自行车等的非明确记忆，走路，驾驶车辆，写字等等都属于程序性记忆。陈述性记忆则包含回忆和对事物有意识的认知。</p>
+<p>语词记忆和语义记忆。视觉形态和文字发音都可以激活一种词的形态上的记忆，它们的载体便是语词记忆。默读是很有意义的，因为视觉和听觉记忆的持续时间都很短，而默读的重复可以帮助我们更持久的记忆。语义记忆则是最强力持久的记忆，即理解。</p>
+<p>关于学习：学习过程中穿插休息时间效果会更好。这一点在之前《幸福课》中也有听到，值得去尝试。临时抱佛脚的方式，短期记忆确实可以，但是若想长期记忆，此方法还是不可行的，临近考试的时候更应该休息才是。</p>
+<p>人对图像的记忆时间是短暂的，只能持续1/4秒。若人的视觉记忆能够持续的视觉更长，我们便会感到几幅图像重叠在一起了。听觉记忆、嗅觉记忆等也都是不稳定的记忆。</p>
+<p>记忆人，可以考虑将人脸的特征和名字结合起来记忆。</p>
+<p>最后，以前一直反感的，将需要记忆的单词首字母组成单词或句子等方式记忆，实际是很有效的。</p>
+]]></content>
+      <categories>
+        <category>book</category>
+      </categories>
+      <tags>
+        <tag>book</tag>
+        <tag>memory</tag>
+      </tags>
+  </entry>
 </search>
