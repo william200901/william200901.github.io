@@ -1,187 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Bulid Blog With Hexo</title>
-    <url>/2020/09/22/build-blog/</url>
-    <content><![CDATA[<h2 id="1-环境准备"><a href="#1-环境准备" class="headerlink" title="1.环境准备"></a>1.环境准备</h2><p>安装环境为win10；<br>安装hexo框架，需要先安装该框架的依赖环境：<br>1.hexo<br>2.Git</p>
-<p>hexo博客框架基于Node.js渲染，必须先安装Node.js环境。<br>Git 用来帮助部署到Github Pages静态仓库上，以域名的形式访问。</p>
-<h2 id="2-安装过程"><a href="#2-安装过程" class="headerlink" title="2.安装过程"></a>2.安装过程</h2><h3 id="2-1安装hexo"><a href="#2-1安装hexo" class="headerlink" title="2.1安装hexo"></a>2.1安装hexo</h3><p>打开Git Bash, 安装过程大多使用npm命令（源在国外）</p>
-<p>安装hexo，在GItBash中输入以下命令，等待操作完成：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ npm install -g hexo</span><br></pre></td></tr></table></figure>
-<h3 id="2-2初始化hexo"><a href="#2-2初始化hexo" class="headerlink" title="2.2初始化hexo"></a>2.2初始化hexo</h3><p>创建hexo文件夹，我个人是F:\blog\hexo，存放文章和代码的地方:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd &#x2F;f&#x2F;blog&#x2F;hexo</span><br><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
-<p>通过以上命令就在对应位置创建并初始化好了hexo文件夹。  </p>
-<p>hexo文件夹中有一个<code>_config.yml</code>文件，为站点根目录配置文件，在其中可修改blog的各种配置。<br>比如切换语言为中文，将language值修改为zh-CN：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Site 站点主配置</span><br><span class="line">title: sanarous教你搭建Hexo博客  &#x2F;&#x2F;网站标题修改</span><br><span class="line">subtitle: so easy~  &#x2F;&#x2F;副标题修改</span><br><span class="line">description:  &#x2F;&#x2F;网站描述</span><br><span class="line">keywords: hexo,next,Java,博客    &#x2F;&#x2F;网站关键字,用英文逗号分开</span><br><span class="line">author: Sanarous   &#x2F;&#x2F;此处填写你自己的昵称  </span><br><span class="line">+ language: zh-CN    &#x2F;&#x2F;这里改成上面在主题配置文件中看到的语言名字，注意英文冒号:后面有一个空格</span><br><span class="line">timezone:   &#x2F;&#x2F;网站时区，保持默认就可以了</span><br></pre></td></tr></table></figure>
-<p>之后回到GitBash命令行，在hexo根目录输入以下命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>
-<p>再打开浏览器，输入<code>http://localhost:4000</code>就可以看到已经做好的博客<br><code>hexo g</code>即<code>hexo generate</code>是重新生成public文件夹的命令，<code>hexo s</code>即<code>hexo server</code>是开启hexo服务器的命令。<code>hexo s</code>具有在线调试的功能。  </p>
-<p>public 文件夹是生成的所有静态文件，html、css、js文件以及图片等。这个文件夹是博客被Node.js渲染后生成的最终文件夹。</p>
-<h3 id="2-3将hexo博客部署到GitHub上"><a href="#2-3将hexo博客部署到GitHub上" class="headerlink" title="2.3将hexo博客部署到GitHub上"></a>2.3将hexo博客部署到GitHub上</h3><p>具体操作见参考文章</p>
-<h3 id="2-4写博客"><a href="#2-4写博客" class="headerlink" title="2.4写博客"></a>2.4写博客</h3><p>在hexo根目录执行gitbash命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo new &lt;postname&gt;</span><br></pre></td></tr></table></figure>
-<p>就可以在<code>hexo/source/_posts</code> 文件夹下新建一个<code>.md</code>文件，即markdown文件，写博客只需本地编辑该文件。</p>
-<p>将本地更新上传到GitHub上，使用命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo clean &amp;&amp; hexo g $$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-写博客遇到的坑"><a href="#3-写博客遇到的坑" class="headerlink" title="3.写博客遇到的坑"></a>3.写博客遇到的坑</h2><ol>
-<li>md文件最上的title内容不能带引号，否则会出错</li>
-<li>关于图片的引用不能推送至github：下载个插件，修改下_config.yml。详情google</li>
-</ol>
-<h2 id="4-主题-amp-功能配置"><a href="#4-主题-amp-功能配置" class="headerlink" title="4.主题&amp;功能配置"></a>4.主题&amp;功能配置</h2><h3 id="4-1关于配置文件的说明"><a href="#4-1关于配置文件的说明" class="headerlink" title="4.1关于配置文件的说明"></a>4.1关于配置文件的说明</h3><p>使用到的有2个配置文件：hexo文件夹下的<code>_config.yml</code>配置文件；主题中的配置文件<code>hexo\themes\next6\_config.yml</code>，其中next6为下载的主题文件夹名称。</p>
-<h3 id="4-2下载安装Next主题"><a href="#4-2下载安装Next主题" class="headerlink" title="4.2下载安装Next主题"></a>4.2下载安装Next主题</h3><p>我使用的是Next6版本，下载地址：<a href="https://github.com/theme-next/hexo-theme-next">https://github.com/theme-next/hexo-theme-next</a><br>将下载好的主题放在<code>F:\blog\hexo\themes\</code>下面。</p>
-<h3 id="4-3设置主题为Next主题"><a href="#4-3设置主题为Next主题" class="headerlink" title="4.3设置主题为Next主题"></a>4.3设置主题为Next主题</h3><p>站点根目录的配置文件<code>_config.yml</code>中，修改主题名：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https:&#x2F;&#x2F;hexo.io&#x2F;plugins&#x2F;</span><br><span class="line">## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">- theme: landscape      # 更改原始默认的主题名称，修改为如下</span><br><span class="line">+ theme: hexo-theme-next   # 此处填入你在themes目录下的next主题文件名</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-4Next主题功能配置"><a href="#4-4Next主题功能配置" class="headerlink" title="4.4Next主题功能配置"></a>4.4Next主题功能配置</h3><p>以下配置若未特别提及，均在主题配置文件中更改</p>
-<h4 id="4-4-1修改favicon图标"><a href="#4-4-1修改favicon图标" class="headerlink" title="4.4.1修改favicon图标"></a>4.4.1修改favicon图标</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">favicon:</span><br><span class="line">  small: &#x2F;images&#x2F;1.png</span><br><span class="line">  medium: &#x2F;images&#x2F;1.png</span><br><span class="line">  apple_touch_icon: &#x2F;1.png</span><br><span class="line">  safari_pinned_tab: &#x2F;1.png</span><br><span class="line">  #android_manifest: &#x2F;images&#x2F;manifest.json</span><br><span class="line">  #ms_browserconfig: &#x2F;images&#x2F;browserconfig.xml</span><br></pre></td></tr></table></figure>
-<p>将想用图标放在主题目录<code>source\images</code>中按照相对路径方式引用即可。也可直接引用第三方图片链接。</p>
-<h4 id="4-4-2阅读更多按钮设置"><a href="#4-4-2阅读更多按钮设置" class="headerlink" title="4.4.2阅读更多按钮设置"></a>4.4.2阅读更多按钮设置</h4><p>1.文章首部<code>front-matter</code>中添加description，提供文章摘录。注意主题配置文件中设置<code>excerpt_description</code>为true才会生效<br>2.在文章中插入<code>&lt;!-- more --&gt;</code>，则该标识后的内容不会显示出来，使用灵活。</p>
-<h4 id="4-4-3设置文章阅读量"><a href="#4-4-3设置文章阅读量" class="headerlink" title="4.4.3设置文章阅读量"></a>4.4.3设置文章阅读量</h4><p>搜索<code>leancloud_visitors</code>,将enable设置为true。需要安装<code>hexo-leancloud-counter-security</code>模块。和valine评论一样，需要的leanCloud的appid和appkey，并且要在leancloud中创建classes对象存储。还需要在根目录配置文件中加入以下代码：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">leancloud_counter_security:</span><br><span class="line">  enable_sync: true</span><br></pre></td></tr></table></figure>
-
-<h4 id="4-4-4看板娘设置"><a href="#4-4-4看板娘设置" class="headerlink" title="4.4.4看板娘设置"></a>4.4.4看板娘设置</h4><p>见文章:<a href="https://github.com/stevenjoezhang/live2d-widget">https://github.com/stevenjoezhang/live2d-widget</a></p>
-<h2 id="5-参考文章"><a href="#5-参考文章" class="headerlink" title="5.参考文章"></a>5.参考文章</h2><p><a href="https://blog.bestzuo.cn/posts/blog-establish.html">Hexo博客+Next主题深度优化与定制</a><br><a href="http://yearito.cn/posts/hexo-advanced-settings.html">Hexo 搭建个人博客系列：进阶设置篇</a><br><a href="https://github.com/stevenjoezhang/live2d-widget">把萌萌哒的看板娘抱回家 (ノ≧∇≦)ノ | Live2D widget for web platform</a><br><a href="https://blog.csdn.net/wugenqiang/article/details/89057323">图片单击放大</a><br><a href="https://yangbingdong.com/2017/build-blog-hexo-advanced/#%E5%AE%9A%E4%BD%8D%E5%85%83%E7%B4%A0">基于Hexo搭建个人博客——进阶篇(从入门到入土)</a></p>
+    <title>The Secret of Memory</title>
+    <url>/2021/02/25/The-Secret-of-Memory/</url>
+    <content><![CDATA[<p><img src="/2021/02/25/The-Secret-of-Memory/The-Secret-of-Memory.jpg"></p>
+<h2 id="总体观感"><a href="#总体观感" class="headerlink" title="总体观感"></a>总体观感</h2><p>这本书先介绍了记忆法的历史，之后提到了现在的一些记忆术，其中讲了很多实验，但是无论是实验还是故事的描述都不够清晰，实验过程也许需要更多时间去体会，毕竟是他人花费心力设计的实验，总不至于草草略读便可以理解。</p>
+<p>还不够细致的读完一遍后，了解到了古代的地点记忆法；之后的数字-字母、数字-图像编码等方式，感觉现在来看并不实用；书后也有讲到很多关于记忆的内容。最后得出的结论则是，不管采用什么技巧，记忆终归是要符合遗忘规律的，为使大脑保持灵光，最好的办法就是尝试各种不同的活动，多刺激大脑了。</p>
+<h2 id="记忆法的历史"><a href="#记忆法的历史" class="headerlink" title="记忆法的历史"></a>记忆法的历史</h2><p><strong>古代地点记忆法：</strong></p>
+<p>西蒙尼德斯的传说：古希腊诗人西蒙尼德斯曾受邀在一场宴会上作诗，他诗中的一部分包含了对双子神卡斯托尔和波鲁克斯的赞美，而这不被其他人接受，因此说好的稿费也只能拿到一半，说是另一半稿费应该找双子神去要。可怜的西蒙尼德斯只好退居一旁。稍后，门童来报，门外有两个年轻男子有事找西蒙尼德斯。西蒙尼德斯出去后却没有见到任何人。同时，西蒙尼德斯刚走出宴会厅时，厅堂便轰然倒塌，其他人都被砸死，面目全非，来收尸的家属也无法辨认。而西蒙尼德斯却发现他记得每个人的位置和特征，于是他根据座位告诉收尸者哪一位是他们的亲人······</p>
+<blockquote>
+<p>这便是地点记忆法的手段。地点记忆法是利用心里熟知的一幅地图，将需要记忆的内容与地图关联起来。回想这条路线图时，我们便可以有序的回想其与之关联的内容。</p>
+</blockquote>
+<h2 id="记忆术"><a href="#记忆术" class="headerlink" title="记忆术"></a>记忆术</h2><p>短时记忆只有20秒中，7个记忆存储，虽没办法提升，但可以使用技巧提高记忆能力，如分类记忆。</p>
+<p>关于人的记忆，阿兹海默病是指老年痴呆，忘掉过去是逆行性记忆障碍，而确实存在着只记得过去发生的事情，会忘掉事故后短时间发生的事情的病例，这是顺行性记忆障碍。</p>
+<p>记忆有两种：程序性记忆和陈述性记忆。程序性记忆，如学习骑自行车等的非明确记忆，走路，驾驶车辆，写字等等都属于程序性记忆。陈述性记忆则包含回忆和对事物有意识的认知。</p>
+<p>语词记忆和语义记忆。视觉形态和文字发音都可以激活一种词的形态上的记忆，它们的载体便是语词记忆。默读是很有意义的，因为视觉和听觉记忆的持续时间都很短，而默读的重复可以帮助我们更持久的记忆。语义记忆则是最强力持久的记忆，即理解。</p>
+<p>关于学习：学习过程中穿插休息时间效果会更好。这一点在之前《幸福课》中也有听到，值得去尝试。临时抱佛脚的方式，短期记忆确实可以，但是若想长期记忆，此方法还是不可行的，临近考试的时候更应该休息才是。</p>
+<p>人对图像的记忆时间是短暂的，只能持续1/4秒。若人的视觉记忆能够持续的视觉更长，我们便会感到几幅图像重叠在一起了。听觉记忆、嗅觉记忆等也都是不稳定的记忆。</p>
+<p>记忆人，可以考虑将人脸的特征和名字结合起来记忆。</p>
+<p>最后，以前一直反感的，将需要记忆的单词首字母组成单词或句子等方式记忆，实际是很有效的。</p>
 ]]></content>
       <categories>
-        <category>technology</category>
+        <category>book</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
-        <tag>blog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Some Pictures</title>
-    <url>/2020/11/16/some-pictures/</url>
-    <content><![CDATA[<p><img src="/2020/11/16/some-pictures/1.jpg"><br><br></p>
-<p><img src="/2020/11/16/some-pictures/1.png"><br><br></p>
-<p><img src="/2020/11/16/some-pictures/2.jpg"><br><br></p>
-<p><img src="/2020/11/16/some-pictures/3.png"><br><br></p>
-<p><img src="/2020/11/16/some-pictures/4.jpg"><br><br></p>
-<p><img src="/2020/11/16/some-pictures/6.jpg"><br><br></p>
-<p><img src="/2020/11/16/some-pictures/15.png"><br><br></p>
-<p><img src="/2020/11/16/some-pictures/16.jpg"><br><br></p>
-<p><img src="/2020/11/16/some-pictures/28.png"><br><br></p>
-<p><img src="/2020/11/16/some-pictures/42.png"><br><br></p>
-<p><img src="/2020/11/16/some-pictures/63.png"><br><br></p>
-<p><img src="/2020/11/16/some-pictures/70.png"></p>
-<p><img src="/2020/11/16/some-pictures/79.jpg"><br><br></p>
-<p><img src="/2020/11/16/some-pictures/100.jpg"><br><br></p>
-]]></content>
-      <categories>
-        <category>resource</category>
-      </categories>
-      <tags>
-        <tag>picture</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>vue-cli + Element-ui 前端开发</title>
-    <url>/2020/09/25/vue-cli-Element-ui/</url>
-    <content><![CDATA[<h1 id="1-开发环境搭建"><a href="#1-开发环境搭建" class="headerlink" title="1.开发环境搭建"></a>1.开发环境搭建</h1><h2 id="1-1前期准备"><a href="#1-1前期准备" class="headerlink" title="1.1前期准备"></a>1.1前期准备</h2><ul>
-<li>需要提前安装Node.js</li>
-<li>使用npm（需要node环境）全局安装webpack</li>
-<li>推荐安装Git，Git用处挺大，有机会单独写写关于Git的使用经验</li>
-<li>编辑器推荐VS Code</li>
-</ul>
-<p>webpack 4.X开始，需要安装webpack-cli依赖，故使用以下命令同时安装webpack和webpack-cli:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install webpack webpack-cli -g</span><br></pre></td></tr></table></figure>
-<p>安装成功后，输入命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">webpack -v</span><br></pre></td></tr></table></figure>
-<p>显示出webpack的版本号则表示安装成功<br><br><br>有了webpack-dev-server 的支持，可以启动一个请求服务器，为你搭建一个测试环境，可以在线调试</p>
-<h2 id="1-2安装vue-cli"><a href="#1-2安装vue-cli" class="headerlink" title="1.2安装vue-cli"></a>1.2安装vue-cli</h2><p>安装好上述的webpack后，全局安装vue-cli，在cmd（或gitbash）中输入命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --global vue-cli</span><br></pre></td></tr></table></figure>
-<p>安装完成后，使用命令查看vue-cli版本(注意命令中的-V为大写)：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vue -V</span><br></pre></td></tr></table></figure>
-<p>成功显示出版本号则表示安装成功<br><br><br>打开C:\Users\Andminster\AppData\Roaming\npm 目录可以看见圈出部分，说明已安装好：</p>
-<p><img src="/2020/09/25/vue-cli-Element-ui/myBlog-vuecli-1.png"></p>
-<h2 id="1-3用vue-cli构建新项目"><a href="#1-3用vue-cli构建新项目" class="headerlink" title="1.3用vue-cli构建新项目"></a>1.3用vue-cli构建新项目</h2><ol>
-<li>在F盘新建一个文件夹vueProj,用来存放项目，cd命令进入该文件夹，执行命令： <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vue init webpack test</span><br></pre></td></tr></table></figure>
- 之后会跳出一系列选项，可以一直回车确认，选择默认项，但是否使用ESLint一项建议选择no（ESLint是一款检查代码错误和规范的插件，但因为太严格，所以不推荐使用）<br> 选项确认完毕后就开始构建项目了</li>
-<li>项目构建完成后，cd命令<code>cd test</code>进入项目文件夹，使用下面命令可以安装全部项目依赖 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
- 但使用<code>vue init webpack test</code>命令构建项目以及选择了安装全部依赖选项，故不必再执行上述命令。<br> 安装好后的文件夹如下:<br> <img src="/2020/09/25/vue-cli-Element-ui/myBlog-vuecli-2.png"></li>
-<li>在项目根目录test下，运行命令： <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
- 然后会开启一个本服务器，按地址访问即可看见初始的helloworld界面。</li>
-</ol>
-<p>至此，最经典的helloworld示例便完成了。</p>
-<h1 id="2-上手新项目的流程"><a href="#2-上手新项目的流程" class="headerlink" title="2.上手新项目的流程"></a>2.上手新项目的流程</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vue init webpack proj</span><br></pre></td></tr></table></figure>
-<p>使用该命令创建包含路由的项目proj。<br><br></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm i element-ui -s</span><br></pre></td></tr></table></figure>
-<p>使用此命令安装element-ui模块。</p>
-<p>之后在main.js文件导入element组件和样式表，并使用ElementUI。即加入以下代码：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import ElementUI from &#39;element-ui&#39;;</span><br><span class="line">import &#39;element-ui&#x2F;lib&#x2F;theme-chalk&#x2F;index.css&#39;;</span><br><span class="line"></span><br><span class="line">Vue.use(ElementUI);</span><br></pre></td></tr></table></figure>
-<p>至此新项目便成功创建了。之后在<a href="https://element.eleme.cn/#/zh-CN/component/layout">element官网</a>中寻找所需组件复制粘贴即可构建自己需要的网页。</p>
-<p>项目中应该会使用到axios插件(与post和get相关的)，此时需要使用命令<code>npm install --save axios</code>来安装该模块，之后在需要使用该模块的vue文件的&lt;script&gt;中加入:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import axios from &#39;axios&#39;</span><br></pre></td></tr></table></figure>
-<h1 id="3-踩过的坑"><a href="#3-踩过的坑" class="headerlink" title="3.踩过的坑"></a>3.踩过的坑</h1><p>踩的坑挺多，简要提下：</p>
-<ol>
-<li><p><code>vue create my-app</code>，命令创建新项目。这种方式创建默认没有router。使用该方式新建项目使用<code>npm run serve</code>运行本地服务器</p>
-</li>
-<li><p>app.vue或者路由的index.js文件，对其他vue页面有引用，如果引用路径不对，或者vue页面名字不对，会报找不到模块的错误</p>
-</li>
-</ol>
-<h1 id="4-参考文章"><a href="#4-参考文章" class="headerlink" title="4.参考文章"></a>4.参考文章</h1><p><a href="https://www.cnblogs.com/ming1025/p/9887247.html">vue-cli（vue脚手架）超详细教程</a></p>
-]]></content>
-      <categories>
-        <category>technology</category>
-      </categories>
-      <tags>
-        <tag>vue-cli</tag>
-        <tag>element-ui</tag>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>vuejs-learn</title>
-    <url>/2020/11/23/vuejs-learn/</url>
-    <content><![CDATA[<h2 id="1-一些有用的工具"><a href="#1-一些有用的工具" class="headerlink" title="1.一些有用的工具"></a>1.一些有用的工具</h2><h3 id="1-1Chrome插件"><a href="#1-1Chrome插件" class="headerlink" title="1.1Chrome插件"></a>1.1Chrome插件</h3><p>Vue.js devtools:开发vue.js非常有用</p>
-<p>AdBlock：屏蔽广告，真心好用</p>
-<p>minerBlock:防止电脑被人恶意当作挖矿机使用</p>
-<h3 id="1-2VScode插件"><a href="#1-2VScode插件" class="headerlink" title="1.2VScode插件"></a>1.2VScode插件</h3><p>vscode-icons</p>
-<p>ESlint</p>
-<p>Vetur</p>
-<p>Beautify</p>
-<p>Markdown Preview Enhanced</p>
-<p>One Dark Pro</p>
-<p>Solarized-light Theme</p>
-]]></content>
-      <categories>
-        <category>techlonogy</category>
-      </categories>
-      <tags>
-        <tag>vue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Word 2019 使用记录</title>
-    <url>/2021/01/25/word-use/</url>
-    <content><![CDATA[<h2 id="1-使用环境"><a href="#1-使用环境" class="headerlink" title="1.使用环境"></a>1.使用环境</h2><p>微软家庭学生版2019</p>
-<h2 id="2-使用上的问题"><a href="#2-使用上的问题" class="headerlink" title="2.使用上的问题"></a>2.使用上的问题</h2><h3 id="2-1显示格式"><a href="#2-1显示格式" class="headerlink" title="2.1显示格式"></a>2.1显示格式</h3><p>word文档复制粘贴，或者有时的自动格式一下就把整个排版弄的乱七八糟，真很让人心烦。而且格式符实际也是占位置的，所以不如显示出格式符，看的反而更清晰。</p>
-<p>1）依次点击：文件–&gt;选项，得到word选项框，如图：<br><img src="/2021/01/25/word-use/1.png"><br><img src="/2021/01/25/word-use/2.png"><br><img src="/2021/01/25/word-use/3.png"></p>
-<p>2)在word选项框中选择<code>自定义功能区</code>，左侧的选择命令位置设置为<code>不在功能区的命令</code>，在左侧找到<code>显示格式</code>一项，如图：<br><img src="/2021/01/25/word-use/4.png"></p>
-<p>3)在右侧选择视图，在其下<code>新建组</code>，<code>重命名</code>为“我添加的功能”，点击<code>添加</code>按钮，最后看到图中第5步显示便表名添加成功了(也不一定要在视图组下新建，可以按自己需求选择在合适的组下创建)，添加完成后点击确定返回就可以了，操作如图：<br><img src="/2021/01/25/word-use/5.png"></p>
-<p>4)回到word文档中，选择视图下，我添加的功能，其中便有显示格式了，打开后可以在显示格式窗口中勾选显示所有格式标记，至此，该问题便得到了解决，操作如图：<br><img src="/2021/01/25/word-use/6.png"><br><img src="/2021/01/25/word-use/7.png"></p>
-<h3 id="2-2显示格式法二"><a href="#2-2显示格式法二" class="headerlink" title="2.2显示格式法二"></a>2.2显示格式法二</h3><p>突然发现有更简单的显示格式，再次记录下，太简单了，直接上图吧：<br><img src="/2021/01/25/word-use/8.png"></p>
-]]></content>
-      <categories>
-        <category>technology</category>
-      </categories>
-      <tags>
-        <tag>word</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>One word one day</title>
-    <url>/2021/02/09/one-word-one-day/</url>
-    <content><![CDATA[<h4 id="2021-2-9"><a href="#2021-2-9" class="headerlink" title="2021.2.9"></a>2021.2.9</h4><p>万事开头难。</p>
-<p>这句话还是有其道理的。5分钟原则：面对拖延症，先去做5分钟再说。一直以来常常感觉到的，吃饭前还专心做的事情，吃完饭后却很难再开始，这或许正是因为停止了做这件事情，所以又需要重新开头。还有很多不想去做的事情，心里就是不想去做，迟迟无法开始，但其实，如果能够坚持去做5分钟，慢慢的就开始做正事了。好了，写完这么多后，我不想干活的心情确实就变淡了，差不该开始干活了。</p>
-]]></content>
-      <categories>
-        <category>life</category>
-      </categories>
-      <tags>
-        <tag>word</tag>
+        <tag>book</tag>
+        <tag>memory</tag>
       </tags>
   </entry>
   <entry>
@@ -341,31 +185,188 @@
       </tags>
   </entry>
   <entry>
-    <title>The Secret of Memory</title>
-    <url>/2021/02/25/The-Secret-of-Memory/</url>
-    <content><![CDATA[<p><img src="/2021/02/25/The-Secret-of-Memory/The-Secret-of-Memory.jpg"></p>
-<h2 id="总体观感"><a href="#总体观感" class="headerlink" title="总体观感"></a>总体观感</h2><p>这本书先介绍了记忆法的历史，之后提到了现在的一些记忆术，其中讲了很多实验，但是无论是实验还是故事的描述都不够清晰，实验过程也许需要更多时间去体会，毕竟是他人花费心力设计的实验，总不至于草草略读便可以理解。</p>
-<p>还不够细致的读完一遍后，了解到了古代的地点记忆法；之后的数字-字母、数字-图像编码等方式，感觉现在来看并不实用；书后也有讲到很多关于记忆的内容。最后得出的结论则是，不管采用什么技巧，记忆终归是要符合遗忘规律的，为使大脑保持灵光，最好的办法就是尝试各种不同的活动，多刺激大脑了。</p>
-<h2 id="记忆法的历史"><a href="#记忆法的历史" class="headerlink" title="记忆法的历史"></a>记忆法的历史</h2><p><strong>古代地点记忆法：</strong></p>
-<p>西蒙尼德斯的传说：古希腊诗人西蒙尼德斯曾受邀在一场宴会上作诗，他诗中的一部分包含了对双子神卡斯托尔和波鲁克斯的赞美，而这不被其他人接受，因此说好的稿费也只能拿到一半，说是另一半稿费应该找双子神去要。可怜的西蒙尼德斯只好退居一旁。稍后，门童来报，门外有两个年轻男子有事找西蒙尼德斯。西蒙尼德斯出去后却没有见到任何人。同时，西蒙尼德斯刚走出宴会厅时，厅堂便轰然倒塌，其他人都被砸死，面目全非，来收尸的家属也无法辨认。而西蒙尼德斯却发现他记得每个人的位置和特征，于是他根据座位告诉收尸者哪一位是他们的亲人······</p>
-<blockquote>
-<p>这便是地点记忆法的手段。地点记忆法是利用心里熟知的一幅地图，将需要记忆的内容与地图关联起来。回想这条路线图时，我们便可以有序的回想其与之关联的内容。</p>
-</blockquote>
-<h2 id="记忆术"><a href="#记忆术" class="headerlink" title="记忆术"></a>记忆术</h2><p>短时记忆只有20秒中，7个记忆存储，虽没办法提升，但可以使用技巧提高记忆能力，如分类记忆。</p>
-<p>关于人的记忆，阿兹海默病是指老年痴呆，忘掉过去是逆行性记忆障碍，而确实存在着只记得过去发生的事情，会忘掉事故后短时间发生的事情的病例，这是顺行性记忆障碍。</p>
-<p>记忆有两种：程序性记忆和陈述性记忆。程序性记忆，如学习骑自行车等的非明确记忆，走路，驾驶车辆，写字等等都属于程序性记忆。陈述性记忆则包含回忆和对事物有意识的认知。</p>
-<p>语词记忆和语义记忆。视觉形态和文字发音都可以激活一种词的形态上的记忆，它们的载体便是语词记忆。默读是很有意义的，因为视觉和听觉记忆的持续时间都很短，而默读的重复可以帮助我们更持久的记忆。语义记忆则是最强力持久的记忆，即理解。</p>
-<p>关于学习：学习过程中穿插休息时间效果会更好。这一点在之前《幸福课》中也有听到，值得去尝试。临时抱佛脚的方式，短期记忆确实可以，但是若想长期记忆，此方法还是不可行的，临近考试的时候更应该休息才是。</p>
-<p>人对图像的记忆时间是短暂的，只能持续1/4秒。若人的视觉记忆能够持续的视觉更长，我们便会感到几幅图像重叠在一起了。听觉记忆、嗅觉记忆等也都是不稳定的记忆。</p>
-<p>记忆人，可以考虑将人脸的特征和名字结合起来记忆。</p>
-<p>最后，以前一直反感的，将需要记忆的单词首字母组成单词或句子等方式记忆，实际是很有效的。</p>
+    <title>Bulid Blog With Hexo</title>
+    <url>/2020/09/22/build-blog/</url>
+    <content><![CDATA[<h2 id="1-环境准备"><a href="#1-环境准备" class="headerlink" title="1.环境准备"></a>1.环境准备</h2><p>安装环境为win10；<br>安装hexo框架，需要先安装该框架的依赖环境：<br>1.hexo<br>2.Git</p>
+<p>hexo博客框架基于Node.js渲染，必须先安装Node.js环境。<br>Git 用来帮助部署到Github Pages静态仓库上，以域名的形式访问。</p>
+<h2 id="2-安装过程"><a href="#2-安装过程" class="headerlink" title="2.安装过程"></a>2.安装过程</h2><h3 id="2-1安装hexo"><a href="#2-1安装hexo" class="headerlink" title="2.1安装hexo"></a>2.1安装hexo</h3><p>打开Git Bash, 安装过程大多使用npm命令（源在国外）</p>
+<p>安装hexo，在GItBash中输入以下命令，等待操作完成：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ npm install -g hexo</span><br></pre></td></tr></table></figure>
+<h3 id="2-2初始化hexo"><a href="#2-2初始化hexo" class="headerlink" title="2.2初始化hexo"></a>2.2初始化hexo</h3><p>创建hexo文件夹，我个人是F:\blog\hexo，存放文章和代码的地方:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd &#x2F;f&#x2F;blog&#x2F;hexo</span><br><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
+<p>通过以上命令就在对应位置创建并初始化好了hexo文件夹。  </p>
+<p>hexo文件夹中有一个<code>_config.yml</code>文件，为站点根目录配置文件，在其中可修改blog的各种配置。<br>比如切换语言为中文，将language值修改为zh-CN：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Site 站点主配置</span><br><span class="line">title: sanarous教你搭建Hexo博客  &#x2F;&#x2F;网站标题修改</span><br><span class="line">subtitle: so easy~  &#x2F;&#x2F;副标题修改</span><br><span class="line">description:  &#x2F;&#x2F;网站描述</span><br><span class="line">keywords: hexo,next,Java,博客    &#x2F;&#x2F;网站关键字,用英文逗号分开</span><br><span class="line">author: Sanarous   &#x2F;&#x2F;此处填写你自己的昵称  </span><br><span class="line">+ language: zh-CN    &#x2F;&#x2F;这里改成上面在主题配置文件中看到的语言名字，注意英文冒号:后面有一个空格</span><br><span class="line">timezone:   &#x2F;&#x2F;网站时区，保持默认就可以了</span><br></pre></td></tr></table></figure>
+<p>之后回到GitBash命令行，在hexo根目录输入以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>
+<p>再打开浏览器，输入<code>http://localhost:4000</code>就可以看到已经做好的博客<br><code>hexo g</code>即<code>hexo generate</code>是重新生成public文件夹的命令，<code>hexo s</code>即<code>hexo server</code>是开启hexo服务器的命令。<code>hexo s</code>具有在线调试的功能。  </p>
+<p>public 文件夹是生成的所有静态文件，html、css、js文件以及图片等。这个文件夹是博客被Node.js渲染后生成的最终文件夹。</p>
+<h3 id="2-3将hexo博客部署到GitHub上"><a href="#2-3将hexo博客部署到GitHub上" class="headerlink" title="2.3将hexo博客部署到GitHub上"></a>2.3将hexo博客部署到GitHub上</h3><p>具体操作见参考文章</p>
+<h3 id="2-4写博客"><a href="#2-4写博客" class="headerlink" title="2.4写博客"></a>2.4写博客</h3><p>在hexo根目录执行gitbash命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo new &lt;postname&gt;</span><br></pre></td></tr></table></figure>
+<p>就可以在<code>hexo/source/_posts</code> 文件夹下新建一个<code>.md</code>文件，即markdown文件，写博客只需本地编辑该文件。</p>
+<p>将本地更新上传到GitHub上，使用命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo clean &amp;&amp; hexo g $$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-写博客遇到的坑"><a href="#3-写博客遇到的坑" class="headerlink" title="3.写博客遇到的坑"></a>3.写博客遇到的坑</h2><ol>
+<li>md文件最上的title内容不能带引号，否则会出错</li>
+<li>关于图片的引用不能推送至github：下载个插件，修改下_config.yml。详情google</li>
+</ol>
+<h2 id="4-主题-amp-功能配置"><a href="#4-主题-amp-功能配置" class="headerlink" title="4.主题&amp;功能配置"></a>4.主题&amp;功能配置</h2><h3 id="4-1关于配置文件的说明"><a href="#4-1关于配置文件的说明" class="headerlink" title="4.1关于配置文件的说明"></a>4.1关于配置文件的说明</h3><p>使用到的有2个配置文件：hexo文件夹下的<code>_config.yml</code>配置文件；主题中的配置文件<code>hexo\themes\next6\_config.yml</code>，其中next6为下载的主题文件夹名称。</p>
+<h3 id="4-2下载安装Next主题"><a href="#4-2下载安装Next主题" class="headerlink" title="4.2下载安装Next主题"></a>4.2下载安装Next主题</h3><p>我使用的是Next6版本，下载地址：<a href="https://github.com/theme-next/hexo-theme-next">https://github.com/theme-next/hexo-theme-next</a><br>将下载好的主题放在<code>F:\blog\hexo\themes\</code>下面。</p>
+<h3 id="4-3设置主题为Next主题"><a href="#4-3设置主题为Next主题" class="headerlink" title="4.3设置主题为Next主题"></a>4.3设置主题为Next主题</h3><p>站点根目录的配置文件<code>_config.yml</code>中，修改主题名：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https:&#x2F;&#x2F;hexo.io&#x2F;plugins&#x2F;</span><br><span class="line">## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">- theme: landscape      # 更改原始默认的主题名称，修改为如下</span><br><span class="line">+ theme: hexo-theme-next   # 此处填入你在themes目录下的next主题文件名</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-4Next主题功能配置"><a href="#4-4Next主题功能配置" class="headerlink" title="4.4Next主题功能配置"></a>4.4Next主题功能配置</h3><p>以下配置若未特别提及，均在主题配置文件中更改</p>
+<h4 id="4-4-1修改favicon图标"><a href="#4-4-1修改favicon图标" class="headerlink" title="4.4.1修改favicon图标"></a>4.4.1修改favicon图标</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">favicon:</span><br><span class="line">  small: &#x2F;images&#x2F;1.png</span><br><span class="line">  medium: &#x2F;images&#x2F;1.png</span><br><span class="line">  apple_touch_icon: &#x2F;1.png</span><br><span class="line">  safari_pinned_tab: &#x2F;1.png</span><br><span class="line">  #android_manifest: &#x2F;images&#x2F;manifest.json</span><br><span class="line">  #ms_browserconfig: &#x2F;images&#x2F;browserconfig.xml</span><br></pre></td></tr></table></figure>
+<p>将想用图标放在主题目录<code>source\images</code>中按照相对路径方式引用即可。也可直接引用第三方图片链接。</p>
+<h4 id="4-4-2阅读更多按钮设置"><a href="#4-4-2阅读更多按钮设置" class="headerlink" title="4.4.2阅读更多按钮设置"></a>4.4.2阅读更多按钮设置</h4><p>1.文章首部<code>front-matter</code>中添加description，提供文章摘录。注意主题配置文件中设置<code>excerpt_description</code>为true才会生效<br>2.在文章中插入<code>&lt;!-- more --&gt;</code>，则该标识后的内容不会显示出来，使用灵活。</p>
+<h4 id="4-4-3设置文章阅读量"><a href="#4-4-3设置文章阅读量" class="headerlink" title="4.4.3设置文章阅读量"></a>4.4.3设置文章阅读量</h4><p>搜索<code>leancloud_visitors</code>,将enable设置为true。需要安装<code>hexo-leancloud-counter-security</code>模块。和valine评论一样，需要的leanCloud的appid和appkey，并且要在leancloud中创建classes对象存储。还需要在根目录配置文件中加入以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">leancloud_counter_security:</span><br><span class="line">  enable_sync: true</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-4-4看板娘设置"><a href="#4-4-4看板娘设置" class="headerlink" title="4.4.4看板娘设置"></a>4.4.4看板娘设置</h4><p>见文章:<a href="https://github.com/stevenjoezhang/live2d-widget">https://github.com/stevenjoezhang/live2d-widget</a></p>
+<h2 id="5-参考文章"><a href="#5-参考文章" class="headerlink" title="5.参考文章"></a>5.参考文章</h2><p><a href="https://blog.bestzuo.cn/posts/blog-establish.html">Hexo博客+Next主题深度优化与定制</a><br><a href="http://yearito.cn/posts/hexo-advanced-settings.html">Hexo 搭建个人博客系列：进阶设置篇</a><br><a href="https://github.com/stevenjoezhang/live2d-widget">把萌萌哒的看板娘抱回家 (ノ≧∇≦)ノ | Live2D widget for web platform</a><br><a href="https://blog.csdn.net/wugenqiang/article/details/89057323">图片单击放大</a><br><a href="https://yangbingdong.com/2017/build-blog-hexo-advanced/#%E5%AE%9A%E4%BD%8D%E5%85%83%E7%B4%A0">基于Hexo搭建个人博客——进阶篇(从入门到入土)</a></p>
 ]]></content>
       <categories>
-        <category>book</category>
+        <category>technology</category>
       </categories>
       <tags>
-        <tag>book</tag>
-        <tag>memory</tag>
+        <tag>hexo</tag>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>One word one day</title>
+    <url>/2021/02/09/one-word-one-day/</url>
+    <content><![CDATA[<h4 id="2021-2-9"><a href="#2021-2-9" class="headerlink" title="2021.2.9"></a>2021.2.9</h4><p>万事开头难。</p>
+<p>这句话还是有其道理的。5分钟原则：面对拖延症，先去做5分钟再说。一直以来常常感觉到的，吃饭前还专心做的事情，吃完饭后却很难再开始，这或许正是因为停止了做这件事情，所以又需要重新开头。还有很多不想去做的事情，心里就是不想去做，迟迟无法开始，但其实，如果能够坚持去做5分钟，慢慢的就开始做正事了。好了，写完这么多后，我不想干活的心情确实就变淡了，差不该开始干活了。</p>
+]]></content>
+      <categories>
+        <category>life</category>
+      </categories>
+      <tags>
+        <tag>word</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Some Pictures</title>
+    <url>/2020/11/16/some-pictures/</url>
+    <content><![CDATA[<p><img src="/2020/11/16/some-pictures/1.jpg"><br><br></p>
+<p><img src="/2020/11/16/some-pictures/1.png"><br><br></p>
+<p><img src="/2020/11/16/some-pictures/2.jpg"><br><br></p>
+<p><img src="/2020/11/16/some-pictures/3.png"><br><br></p>
+<p><img src="/2020/11/16/some-pictures/4.jpg"><br><br></p>
+<p><img src="/2020/11/16/some-pictures/6.jpg"><br><br></p>
+<p><img src="/2020/11/16/some-pictures/15.png"><br><br></p>
+<p><img src="/2020/11/16/some-pictures/16.jpg"><br><br></p>
+<p><img src="/2020/11/16/some-pictures/28.png"><br><br></p>
+<p><img src="/2020/11/16/some-pictures/42.png"><br><br></p>
+<p><img src="/2020/11/16/some-pictures/63.png"><br><br></p>
+<p><img src="/2020/11/16/some-pictures/70.png"></p>
+<p><img src="/2020/11/16/some-pictures/79.jpg"><br><br></p>
+<p><img src="/2020/11/16/some-pictures/100.jpg"><br><br></p>
+<p><img src="/2020/11/16/some-pictures/109.jpg"><br><br></p>
+]]></content>
+      <categories>
+        <category>resource</category>
+      </categories>
+      <tags>
+        <tag>picture</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vuejs-learn</title>
+    <url>/2020/11/23/vuejs-learn/</url>
+    <content><![CDATA[<h2 id="1-一些有用的工具"><a href="#1-一些有用的工具" class="headerlink" title="1.一些有用的工具"></a>1.一些有用的工具</h2><h3 id="1-1Chrome插件"><a href="#1-1Chrome插件" class="headerlink" title="1.1Chrome插件"></a>1.1Chrome插件</h3><p>Vue.js devtools:开发vue.js非常有用</p>
+<p>AdBlock：屏蔽广告，真心好用</p>
+<p>minerBlock:防止电脑被人恶意当作挖矿机使用</p>
+<h3 id="1-2VScode插件"><a href="#1-2VScode插件" class="headerlink" title="1.2VScode插件"></a>1.2VScode插件</h3><p>vscode-icons</p>
+<p>ESlint</p>
+<p>Vetur</p>
+<p>Beautify</p>
+<p>Markdown Preview Enhanced</p>
+<p>One Dark Pro</p>
+<p>Solarized-light Theme</p>
+]]></content>
+      <categories>
+        <category>techlonogy</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vue-cli + Element-ui 前端开发</title>
+    <url>/2020/09/25/vue-cli-Element-ui/</url>
+    <content><![CDATA[<h1 id="1-开发环境搭建"><a href="#1-开发环境搭建" class="headerlink" title="1.开发环境搭建"></a>1.开发环境搭建</h1><h2 id="1-1前期准备"><a href="#1-1前期准备" class="headerlink" title="1.1前期准备"></a>1.1前期准备</h2><ul>
+<li>需要提前安装Node.js</li>
+<li>使用npm（需要node环境）全局安装webpack</li>
+<li>推荐安装Git，Git用处挺大，有机会单独写写关于Git的使用经验</li>
+<li>编辑器推荐VS Code</li>
+</ul>
+<p>webpack 4.X开始，需要安装webpack-cli依赖，故使用以下命令同时安装webpack和webpack-cli:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install webpack webpack-cli -g</span><br></pre></td></tr></table></figure>
+<p>安装成功后，输入命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">webpack -v</span><br></pre></td></tr></table></figure>
+<p>显示出webpack的版本号则表示安装成功<br><br><br>有了webpack-dev-server 的支持，可以启动一个请求服务器，为你搭建一个测试环境，可以在线调试</p>
+<h2 id="1-2安装vue-cli"><a href="#1-2安装vue-cli" class="headerlink" title="1.2安装vue-cli"></a>1.2安装vue-cli</h2><p>安装好上述的webpack后，全局安装vue-cli，在cmd（或gitbash）中输入命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --global vue-cli</span><br></pre></td></tr></table></figure>
+<p>安装完成后，使用命令查看vue-cli版本(注意命令中的-V为大写)：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vue -V</span><br></pre></td></tr></table></figure>
+<p>成功显示出版本号则表示安装成功<br><br><br>打开C:\Users\Andminster\AppData\Roaming\npm 目录可以看见圈出部分，说明已安装好：</p>
+<p><img src="/2020/09/25/vue-cli-Element-ui/myBlog-vuecli-1.png"></p>
+<h2 id="1-3用vue-cli构建新项目"><a href="#1-3用vue-cli构建新项目" class="headerlink" title="1.3用vue-cli构建新项目"></a>1.3用vue-cli构建新项目</h2><ol>
+<li>在F盘新建一个文件夹vueProj,用来存放项目，cd命令进入该文件夹，执行命令： <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vue init webpack test</span><br></pre></td></tr></table></figure>
+ 之后会跳出一系列选项，可以一直回车确认，选择默认项，但是否使用ESLint一项建议选择no（ESLint是一款检查代码错误和规范的插件，但因为太严格，所以不推荐使用）<br> 选项确认完毕后就开始构建项目了</li>
+<li>项目构建完成后，cd命令<code>cd test</code>进入项目文件夹，使用下面命令可以安装全部项目依赖 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+ 但使用<code>vue init webpack test</code>命令构建项目以及选择了安装全部依赖选项，故不必再执行上述命令。<br> 安装好后的文件夹如下:<br> <img src="/2020/09/25/vue-cli-Element-ui/myBlog-vuecli-2.png"></li>
+<li>在项目根目录test下，运行命令： <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
+ 然后会开启一个本服务器，按地址访问即可看见初始的helloworld界面。</li>
+</ol>
+<p>至此，最经典的helloworld示例便完成了。</p>
+<h1 id="2-上手新项目的流程"><a href="#2-上手新项目的流程" class="headerlink" title="2.上手新项目的流程"></a>2.上手新项目的流程</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vue init webpack proj</span><br></pre></td></tr></table></figure>
+<p>使用该命令创建包含路由的项目proj。<br><br></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm i element-ui -s</span><br></pre></td></tr></table></figure>
+<p>使用此命令安装element-ui模块。</p>
+<p>之后在main.js文件导入element组件和样式表，并使用ElementUI。即加入以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import ElementUI from &#39;element-ui&#39;;</span><br><span class="line">import &#39;element-ui&#x2F;lib&#x2F;theme-chalk&#x2F;index.css&#39;;</span><br><span class="line"></span><br><span class="line">Vue.use(ElementUI);</span><br></pre></td></tr></table></figure>
+<p>至此新项目便成功创建了。之后在<a href="https://element.eleme.cn/#/zh-CN/component/layout">element官网</a>中寻找所需组件复制粘贴即可构建自己需要的网页。</p>
+<p>项目中应该会使用到axios插件(与post和get相关的)，此时需要使用命令<code>npm install --save axios</code>来安装该模块，之后在需要使用该模块的vue文件的&lt;script&gt;中加入:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import axios from &#39;axios&#39;</span><br></pre></td></tr></table></figure>
+<h1 id="3-踩过的坑"><a href="#3-踩过的坑" class="headerlink" title="3.踩过的坑"></a>3.踩过的坑</h1><p>踩的坑挺多，简要提下：</p>
+<ol>
+<li><p><code>vue create my-app</code>，命令创建新项目。这种方式创建默认没有router。使用该方式新建项目使用<code>npm run serve</code>运行本地服务器</p>
+</li>
+<li><p>app.vue或者路由的index.js文件，对其他vue页面有引用，如果引用路径不对，或者vue页面名字不对，会报找不到模块的错误</p>
+</li>
+</ol>
+<h1 id="4-参考文章"><a href="#4-参考文章" class="headerlink" title="4.参考文章"></a>4.参考文章</h1><p><a href="https://www.cnblogs.com/ming1025/p/9887247.html">vue-cli（vue脚手架）超详细教程</a></p>
+]]></content>
+      <categories>
+        <category>technology</category>
+      </categories>
+      <tags>
+        <tag>vue-cli</tag>
+        <tag>element-ui</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Word 2019 使用记录</title>
+    <url>/2021/01/25/word-use/</url>
+    <content><![CDATA[<h2 id="1-使用环境"><a href="#1-使用环境" class="headerlink" title="1.使用环境"></a>1.使用环境</h2><p>微软家庭学生版2019</p>
+<h2 id="2-使用上的问题"><a href="#2-使用上的问题" class="headerlink" title="2.使用上的问题"></a>2.使用上的问题</h2><h3 id="2-1显示格式"><a href="#2-1显示格式" class="headerlink" title="2.1显示格式"></a>2.1显示格式</h3><p>word文档复制粘贴，或者有时的自动格式一下就把整个排版弄的乱七八糟，真很让人心烦。而且格式符实际也是占位置的，所以不如显示出格式符，看的反而更清晰。</p>
+<p>1）依次点击：文件–&gt;选项，得到word选项框，如图：<br><img src="/2021/01/25/word-use/1.png"><br><img src="/2021/01/25/word-use/2.png"><br><img src="/2021/01/25/word-use/3.png"></p>
+<p>2)在word选项框中选择<code>自定义功能区</code>，左侧的选择命令位置设置为<code>不在功能区的命令</code>，在左侧找到<code>显示格式</code>一项，如图：<br><img src="/2021/01/25/word-use/4.png"></p>
+<p>3)在右侧选择视图，在其下<code>新建组</code>，<code>重命名</code>为“我添加的功能”，点击<code>添加</code>按钮，最后看到图中第5步显示便表名添加成功了(也不一定要在视图组下新建，可以按自己需求选择在合适的组下创建)，添加完成后点击确定返回就可以了，操作如图：<br><img src="/2021/01/25/word-use/5.png"></p>
+<p>4)回到word文档中，选择视图下，我添加的功能，其中便有显示格式了，打开后可以在显示格式窗口中勾选显示所有格式标记，至此，该问题便得到了解决，操作如图：<br><img src="/2021/01/25/word-use/6.png"><br><img src="/2021/01/25/word-use/7.png"></p>
+<h3 id="2-2显示格式法二"><a href="#2-2显示格式法二" class="headerlink" title="2.2显示格式法二"></a>2.2显示格式法二</h3><p>突然发现有更简单的显示格式，再次记录下，太简单了，直接上图吧：<br><img src="/2021/01/25/word-use/8.png"></p>
+]]></content>
+      <categories>
+        <category>technology</category>
+      </categories>
+      <tags>
+        <tag>word</tag>
       </tags>
   </entry>
 </search>
