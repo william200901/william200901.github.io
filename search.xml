@@ -382,4 +382,23 @@
         <tag>cmd</tag>
       </tags>
   </entry>
+  <entry>
+    <title>数据挖掘学习笔记</title>
+    <url>/2021/11/21/data-mine/</url>
+    <content><![CDATA[<h2 id="什么是数据挖掘"><a href="#什么是数据挖掘" class="headerlink" title="什么是数据挖掘"></a>什么是数据挖掘</h2><p>数据挖掘是一种技术，将传统的数据分析方法与处理大量数据的复杂算法相结合。</p>
+<p>数据挖掘是在大型数据存储库中，自动发现有用信息的过程。</p>
+<p>通过因特网的搜索引擎查找特定Web页面的过程为信息检索，而非数据挖掘。</p>
+<h2 id="数据挖掘任务"><a href="#数据挖掘任务" class="headerlink" title="数据挖掘任务"></a>数据挖掘任务</h2><p>数据挖掘任务分两类：<code>预测任务</code>和<code>描述任务</code></p>
+<p><code>预测任务</code>：根据其他属性的值，预测特定属性的值</p>
+<p><code>描述任务</code>：导出概括数据中潜在联系的模式（相关、趋势、聚类、轨迹和异常）</p>
+<p>四种主要的数据挖掘任务：</p>
+<p><code>聚类分析</code><br><code>预测建模</code><br><code>关联分析</code><br><code>异常检测</code></p>
+]]></content>
+      <categories>
+        <category>technology</category>
+      </categories>
+      <tags>
+        <tag>data mine</tag>
+      </tags>
+  </entry>
 </search>
