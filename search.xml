@@ -383,7 +383,7 @@
       </tags>
   </entry>
   <entry>
-    <title>数据挖掘学习笔记</title>
+    <title>数据挖掘调研</title>
     <url>/2021/11/21/data-mine/</url>
     <content><![CDATA[<h2 id="什么是数据挖掘"><a href="#什么是数据挖掘" class="headerlink" title="什么是数据挖掘"></a>什么是数据挖掘</h2><p>数据挖掘是一种技术，将传统的数据分析方法与处理大量数据的复杂算法相结合。</p>
 <p>数据挖掘是在大型数据存储库中，自动发现有用信息的过程。</p>
@@ -393,6 +393,63 @@
 <p><code>描述任务</code>：导出概括数据中潜在联系的模式（相关、趋势、聚类、轨迹和异常）</p>
 <p>四种主要的数据挖掘任务：</p>
 <p><code>聚类分析</code><br><code>预测建模</code><br><code>关联分析</code><br><code>异常检测</code></p>
+<h2 id="KDD2021会议"><a href="#KDD2021会议" class="headerlink" title="KDD2021会议"></a>KDD2021会议</h2><h3 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h3><p>图神经网络、时间序列、时空数据处理</p>
+<h2 id="基于图神经网络的推荐系统研究综述"><a href="#基于图神经网络的推荐系统研究综述" class="headerlink" title="基于图神经网络的推荐系统研究综述"></a>基于图神经网络的推荐系统研究综述</h2><h3 id="知识了解"><a href="#知识了解" class="headerlink" title="知识了解"></a>知识了解</h3><h4 id="二部图（二分图）"><a href="#二部图（二分图）" class="headerlink" title="二部图（二分图）"></a>二部图（二分图）</h4><p>顶点集合可分割为两个互不相交的子集，且图中每条边依附的两个顶点分别属于两个集合</p>
+<h4 id="异构图"><a href="#异构图" class="headerlink" title="异构图"></a>异构图</h4><p><code>同构图</code>中只存在一种节点和边，构建图神经网络时所有节点共享同样的模型参数并且拥有同样维度的特征空间。</p>
+<p><code>异构图</code>中可以存在不止一种节点和边，因此不同类型节点可以拥有不同维度的特征或属性。</p>
+<h4 id="关系数据库"><a href="#关系数据库" class="headerlink" title="关系数据库"></a>关系数据库</h4><p><code>关系数据库</code>：采用关系模型组织数据的数据库。简单说关系模式就是二维表格，如MySql 数据库。</p>
+<p><code>非关系型数据库</code>：如NoSQL提出以键值存储数据，每个元组可以有不同的字段。代表有MongoDB，Redis</p>
+<p>参考：</p>
+<p><a href="https://zhuanlan.zhihu.com/p/78619241">关系数据库</a></p>
+<p><a href="https://www.oracle.com/cn/database/what-is-a-relational-database/">https://www.oracle.com/cn/database/what-is-a-relational-database/</a></p>
+<h4 id="知识图谱"><a href="#知识图谱" class="headerlink" title="知识图谱"></a>知识图谱</h4><p><code>知识图谱</code>：结构化的语义知识库，用于迅速描述物理世界中的概念及其相互关系。</p>
+<p>通过对数据加工、处理、整合，转化为简单清晰的 “实体-关系-实体”或者“实体-属性-属性值” 三元组，最后聚合大量知识，实现知识的快速响应和推理。</p>
+<p>其中数据来源有三类：</p>
+<ul>
+<li>结构化数据：关系数据库</li>
+<li>半结构化数据：XML，JSON</li>
+<li>非结构化数据：图片，音频，视频，文本</li>
+</ul>
+<p>知识图谱的构建过程分三步：信息抽取、知识融合、知识加工</p>
+<p>信息抽取为从原始数据中提取实体，关系，实体属性等信息</p>
+<p>知识融合包括实体链接和知识合并两部分。实体链接是将抽取的实体，链接到知识库中对应的正确实体对象。知识合并是将从第三方知识库或者结构化数据获取的知识，合并到知识库中。</p>
+<p>知识加工包括本体构建、知识推理、质量评估。本体构建简单来说是将实体分类，比如“阿里巴巴”和“腾讯”是一类，“手机是另一类”。知识推理为完善知识图谱的实体间关系的步骤，比如已知A是B配偶，B是C的主席，C生活在城市D，则可以推理出A生活在城市D。质量评估为量化知识的可信度，舍弃置信度较低的知识来保证知识库的质量。</p>
+<p><a href="https://www.cnblogs.com/huangyc/p/10043749.html">知识图谱详解</a></p>
+<h3 id="CNN-卷积神经网络"><a href="#CNN-卷积神经网络" class="headerlink" title="CNN 卷积神经网络"></a>CNN 卷积神经网络</h3><p>CNN的本质作用：特征提取</p>
+<p>CNN基本配置：卷积层、Relu层（非线性激活函数）、池化层、全连接层FC（Fully Connected layer）</p>
+<p><code>卷积层</code>：从图片中选取特征，构造卷积核。使用卷积核在原图中滑动，对应相乘，取平均值，填入新图中，则得到一张新图，称为特征图。三个卷积核作用于原图则得到三个特征图。卷积核的大小，以及滑动步长可以自行选择，因此特征图小于原图。</p>
+<p><code>非线性激活层</code>：神经网络中用到的最多的非线性激活函数为Relu函数，定义为，<code>f(x)=max(0,x)</code>。因为越接近1的值表明该区域与特征越接近，因此直接舍弃与特征不相关的数据，达到减少数据的目的。</p>
+<p><code>pooling池化层</code>：池化的作用为减少数据量。池化分为最大池化 和 平均池化，分别为取最大值和取平均值。举例，选取2x2窗口对特征图池化，则为将原特征图划分为2x2的窗口，每个2x2窗口中选取最大值，构造新的特征图，如此，原图数据量变为了1/4。</p>
+<p><code>全连接层</code>：神经网络中最普通的层，即一排神经元，每个神经元都和前一层的每个单元相连接，所以称为“全连接”。</p>
+<p>非线性激活层在第一个参考链接的介绍中并非一个严格的层。CNN的结构可以由上面的各层组合，比如：</p>
+<p><code>X--&gt;CONV(relu)--&gt;MAXPOOL--&gt;CONV(relu)--&gt;FC(relu)--&gt;FC(softmax)--&gt;Y</code></p>
+<p>便是一个CNN网络的例子。</p>
+<h4 id="CNN-与传统神经网络的区别"><a href="#CNN-与传统神经网络的区别" class="headerlink" title="CNN 与传统神经网络的区别"></a>CNN 与传统神经网络的区别</h4><p>1.参数共享机制</p>
+<p>CNN实际是训练卷积核（filter）的中的内容，卷积层只需要卷积核便可以得到下一层的输入，因此参数数量由卷积核大小决定。而传统的神经网络为全连接层，参数数量巨大。举个例子：输入8x8图像，用一个9个单元的全连接层，则传统神经网络的参数为64x9个，使用9个单元的filter的CNN卷积层只有9个参数，故CNN参数数量大大减少。</p>
+<p>2.连接的稀疏性</p>
+<p>CNN卷积层输出图像的每个单元只与输入图像的一部分有关，相比传统神经网络的全连接，更具有优势。</p>
+<p>结合图片讲解效果会更好，更详细参考见链接：<br><a href="https://zhuanlan.zhihu.com/p/42559190">https://zhuanlan.zhihu.com/p/42559190</a><br><a href="https://zhuanlan.zhihu.com/p/27908027">https://zhuanlan.zhihu.com/p/27908027</a></p>
+<h3 id="GNN-图神经网络-相关知识"><a href="#GNN-图神经网络-相关知识" class="headerlink" title="GNN 图神经网络 相关知识"></a>GNN 图神经网络 相关知识</h3><h4 id="邻接矩阵"><a href="#邻接矩阵" class="headerlink" title="邻接矩阵"></a>邻接矩阵</h4><p><code>邻接矩阵</code>是图的一种表示方式，利用一个一维数组和二维矩阵来表示一个图。一维矩阵存储顶点信息，二维矩阵存储边的信息，表示顶点之间的连接关系，以及边的权值。</p>
+<h4 id="Word2Vec-原理"><a href="#Word2Vec-原理" class="headerlink" title="Word2Vec 原理"></a>Word2Vec 原理</h4><p>Word2Vec 是用来生成词向量的工具。词向量是由句子编码得到的向量，方便NLP中的机器学习算法来处理。<br>常见的编码方式有两种：<code>One-Hot Representation</code>和<code>Distributed Representation</code></p>
+<p><code>One-Hot Representation</code>方法为：用一个很长的向量表示一个词，向量长度为词典大小，向量中只有一个1，其余都是0，1表示词在字典中的位置。缺点：1）维数灾难。词汇量很大时，向量维度很长。2）词汇鸿沟。任意两个词之间是孤立的，没有刻画词与词之间的相关性。3）强稀疏性。0特别多，有用信息少。</p>
+<p><code>Distributed Representation</code>方法为：通过训练的方法，将一种语言中的每一个词映射为一个固定长度的短向量（想对One-Hot而言的短）。所有向量构成一个向量空间，向量与向量间的距离表示两个词之间语法、语义的相似性。</p>
+<p>Word2Vec 是轻量级神经网络，仅包括输入层、隐藏层、输出层。根据输入输出不同，主要包括CBOW和Skip-gram模型。</p>
+<h5 id="何为Embedding？"><a href="#何为Embedding？" class="headerlink" title="何为Embedding？"></a>何为Embedding？</h5><p>广义概念为：通过训练的网络或者其他构造方法得到的样本的特征向量称作Embedding。</p>
+<p>狭义概念为：一个元素的Embedding是该元素传播到神经网络的隐藏层（Word2Vec模型）计算得出的向量。</p>
+<p>参考：<br><a href="https://zhuanlan.zhihu.com/p/114538417">https://zhuanlan.zhihu.com/p/114538417</a></p>
+<h4 id="图表示学习"><a href="#图表示学习" class="headerlink" title="图表示学习"></a>图表示学习</h4><h5 id="节点Embedding"><a href="#节点Embedding" class="headerlink" title="节点Embedding"></a>节点Embedding</h5><p>节点的Embedding特征向量的距离，要与节点间的相似度对应。目的是学习得到包含所有节点Embedding的矩阵。问题在于如何定义节点间的相似度。有以下三种方法：<br><code>Adjacency-based Similarity</code>：使用原图的邻接矩阵。直接使用节点u与节点v之间的边的权重和节点间Embedding向量的距离，来构造损失loss，训练使得loss最小，得到最优Embedding矩阵。</p>
+<p><code>Multi-hop similarity</code>：与第一种方法类似，但是考虑多跳节点之间的关系。</p>
+<p><code>Random walk approaches</code>：随机游走方法是，从每个节点出发，以一定的游走策略走一定跳数，得到每个节点对应的访问节点集合Nr(u)，最优根据公式；最优化Embedding。游走策略有BFS（广度优先）和DFS（深度优先）。BFS更利于探索局部微观信息，DFS更利于探索全局宏观信息。最后的策略将两者结合，分别设置一定概率执行BFS或DFS。</p>
+<p>随机游走的节点表征方法包括DeepWalk、Node2Vec。DeepWalk走向邻居节点的概率均等，而Node2Vec引入了使用DFS，BFS的概率。</p>
+<p>以上三种Embedding为“shallow” Embedding，GNN的目的则是获得“Deep” Embedding。</p>
+<h4 id="GNN"><a href="#GNN" class="headerlink" title="GNN"></a>GNN</h4><p>GNN 的目标是学习得到每个节点的嵌入向量Embedding，该向量包含每个节点的邻居节点的信息。基本GNN结构如下图所示：<br><img src="/2021/11/21/data-mine/data-mining-1.png"><br>有GCN(Graph Convolutional Networks)、GraphSAGE、Gated Graph Neural Network、Gubgraph Embeddings 4种模型来获取Embedding。</p>
+<p>更具体讲解参考：<br><a href="http://snap.stanford.edu/proj/embeddings-www/">图表示学习</a><br><a href="https://zhuanlan.zhihu.com/p/76001080">GNN综述</a></p>
+<h2 id="如何写好一篇综述？"><a href="#如何写好一篇综述？" class="headerlink" title="如何写好一篇综述？"></a>如何写好一篇综述？</h2><p>目前的认识来看，写好一篇综述是需要不少时间的。因为只有真正了解与理解了一件事情，才能把它说清楚。就目前看到的别人写的综述，动辄3，40页，这里首先诚恳的承认他们能够写出来是很厉害的，但是他们写出来的综述，作者并非一个人，而是一群人，写完综述所用的时间，也是我不知道的，我想应该不会几天或者一周就能完成。</p>
+<p>我认为这种很长的综述，是一个小组一起看论文，然后组会分享，经过大家共同的努力完成的。我还没有亲眼见识过科研很厉害的人，那种能够放下其他一切事情，沉入到课题中去，或者是效率很高，能够短时间了解接触的一个新领域，并迅速做出成果的人。我也还没有开过组会，只是听说过组会便是分享自己一周所作的工作，但是，我觉得组会还是很有作用的，便不展开阐述了。</p>
+<p>回到我自己的处境来，我该如何写好我的这篇综述呢？以往写的综述，基本是从网上到处找内容复制粘贴，拼拼凑凑成一篇论文，这样写出来的东西肯定是不行的。后来找过英文综述，然后翻译成中文，其实这样也不妥。一来算是抄袭；二来只是照搬别人的思想，没有自己的理解，况且一般英文综述都比较长，只能挑其中的一部分来翻译，最后得到的综述也不完整。</p>
+<p>所以，现在得出的结论为，想要在有限的，短短几天的时间内，写出一篇看起来还不错的综述，只好先理解别人写好的综述，再按照自己的想法重新组织内容，写出自己的综述。因为时间有限，且自己目前阅读文献的速度不够快，只看些综述便是极限了，如果时间再宽一点点，或许看些论文的摘要也会有用。然后要想写好，还是得自己来组织内容才是，毕竟抄袭始终不是正途。</p>
+<p>既如此，目前的目标已经明确，看目前搜集的几篇综述，整理出自己想法的大纲框架，然后开始写综述。</p>
+<p>看别人写的综述，将不同文献分类并整理出来，感觉还是需要对该领域的一定了解的。至少我自己目前便没有把握将其分类，也没有时间阅读那么多会议论文，并将其归为自己划分的类中。</p>
 ]]></content>
       <categories>
         <category>technology</category>
