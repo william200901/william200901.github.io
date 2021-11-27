@@ -385,7 +385,10 @@
   <entry>
     <title>数据挖掘调研</title>
     <url>/2021/11/21/data-mine/</url>
-    <content><![CDATA[<h2 id="什么是数据挖掘"><a href="#什么是数据挖掘" class="headerlink" title="什么是数据挖掘"></a>什么是数据挖掘</h2><p>数据挖掘是一种技术，将传统的数据分析方法与处理大量数据的复杂算法相结合。</p>
+    <content><![CDATA[<h2 id="数据挖掘三大顶会"><a href="#数据挖掘三大顶会" class="headerlink" title="数据挖掘三大顶会"></a>数据挖掘三大顶会</h2><p>sigKDD：<a href="http://www.sigkdd.org/">http://www.sigkdd.org/</a></p>
+<p>ICDM: <a href="http://www.cs.uvm.edu/~icdm/">http://www.cs.uvm.edu/~icdm/</a></p>
+<p>SDM: <a href="http://www.siam.org/meetings/sdm07/">http://www.siam.org/meetings/sdm07/</a></p>
+<h2 id="什么是数据挖掘"><a href="#什么是数据挖掘" class="headerlink" title="什么是数据挖掘"></a>什么是数据挖掘</h2><p>数据挖掘是一种技术，将传统的数据分析方法与处理大量数据的复杂算法相结合。</p>
 <p>数据挖掘是在大型数据存储库中，自动发现有用信息的过程。</p>
 <p>通过因特网的搜索引擎查找特定Web页面的过程为信息检索，而非数据挖掘。</p>
 <h2 id="数据挖掘任务"><a href="#数据挖掘任务" class="headerlink" title="数据挖掘任务"></a>数据挖掘任务</h2><p>数据挖掘任务分两类：<code>预测任务</code>和<code>描述任务</code></p>
@@ -393,7 +396,7 @@
 <p><code>描述任务</code>：导出概括数据中潜在联系的模式（相关、趋势、聚类、轨迹和异常）</p>
 <p>四种主要的数据挖掘任务：</p>
 <p><code>聚类分析</code><br><code>预测建模</code><br><code>关联分析</code><br><code>异常检测</code></p>
-<h2 id="KDD2021会议"><a href="#KDD2021会议" class="headerlink" title="KDD2021会议"></a>KDD2021会议</h2><h3 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h3><p>图神经网络、时间序列、时空数据处理</p>
+<h2 id="KDD2021会议部分论文"><a href="#KDD2021会议部分论文" class="headerlink" title="KDD2021会议部分论文"></a>KDD2021会议部分论文</h2><h3 id="出现较多的关键词"><a href="#出现较多的关键词" class="headerlink" title="出现较多的关键词"></a>出现较多的关键词</h3><p>图神经网络、时间序列、时空数据处理</p>
 <h2 id="基于图神经网络的推荐系统研究综述"><a href="#基于图神经网络的推荐系统研究综述" class="headerlink" title="基于图神经网络的推荐系统研究综述"></a>基于图神经网络的推荐系统研究综述</h2><h3 id="知识了解"><a href="#知识了解" class="headerlink" title="知识了解"></a>知识了解</h3><h4 id="二部图（二分图）"><a href="#二部图（二分图）" class="headerlink" title="二部图（二分图）"></a>二部图（二分图）</h4><p>顶点集合可分割为两个互不相交的子集，且图中每条边依附的两个顶点分别属于两个集合</p>
 <h4 id="异构图"><a href="#异构图" class="headerlink" title="异构图"></a>异构图</h4><p><code>同构图</code>中只存在一种节点和边，构建图神经网络时所有节点共享同样的模型参数并且拥有同样维度的特征空间。</p>
 <p><code>异构图</code>中可以存在不止一种节点和边，因此不同类型节点可以拥有不同维度的特征或属性。</p>
@@ -444,7 +447,10 @@
 <p>以上三种Embedding为“shallow” Embedding，GNN的目的则是获得“Deep” Embedding。</p>
 <h4 id="GNN"><a href="#GNN" class="headerlink" title="GNN"></a>GNN</h4><p>GNN 的目标是学习得到每个节点的嵌入向量Embedding，该向量包含每个节点的邻居节点的信息。基本GNN结构如下图所示：<br><img src="/2021/11/21/data-mine/data-mining-1.png"><br>有GCN(Graph Convolutional Networks)、GraphSAGE、Gated Graph Neural Network、Gubgraph Embeddings 4种模型来获取Embedding。</p>
 <p>更具体讲解参考：<br><a href="http://snap.stanford.edu/proj/embeddings-www/">图表示学习</a><br><a href="https://zhuanlan.zhihu.com/p/76001080">GNN综述</a></p>
-<h2 id="如何写好一篇综述？"><a href="#如何写好一篇综述？" class="headerlink" title="如何写好一篇综述？"></a>如何写好一篇综述？</h2><p>目前的认识来看，写好一篇综述是需要不少时间的。因为只有真正了解与理解了一件事情，才能把它说清楚。就目前看到的别人写的综述，动辄3，40页，这里首先诚恳的承认他们能够写出来是很厉害的，但是他们写出来的综述，作者并非一个人，而是一群人，写完综述所用的时间，也是我不知道的，我想应该不会几天或者一周就能完成。</p>
+<h2 id="论文阅读笔记"><a href="#论文阅读笔记" class="headerlink" title="论文阅读笔记"></a>论文阅读笔记</h2><h3 id="Graph-Neural-Networks-for-Recommender-Systems-Challenges-Methods-and-Directions"><a href="#Graph-Neural-Networks-for-Recommender-Systems-Challenges-Methods-and-Directions" class="headerlink" title="Graph Neural Networks for Recommender Systems: Challenges, Methods, and Directions"></a>Graph Neural Networks for Recommender Systems: Challenges, Methods, and Directions</h3><h4 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h4><p>推荐系统和图神经网络发展介绍</p>
+<h4 id="挑战"><a href="#挑战" class="headerlink" title="挑战"></a>挑战</h4><p>图神经网络应用于推荐系统的挑战</p>
+<h4 id="现存方法"><a href="#现存方法" class="headerlink" title="现存方法"></a>现存方法</h4><p>GNN 在推荐系统实现阶段、推荐场景、GNN的目标、GNN在特定推荐中的应用</p>
+<h4 id="问题和未来研究方向"><a href="#问题和未来研究方向" class="headerlink" title="问题和未来研究方向"></a>问题和未来研究方向</h4><h2 id="如何写好一篇综述？"><a href="#如何写好一篇综述？" class="headerlink" title="如何写好一篇综述？"></a>如何写好一篇综述？</h2><p>目前的认识来看，写好一篇综述是需要不少时间的。因为只有真正了解与理解了一件事情，才能把它说清楚。就目前看到的别人写的综述，动辄3，40页，这里首先诚恳的承认他们能够写出来是很厉害的，但是他们写出来的综述，作者并非一个人，而是一群人，写完综述所用的时间，也是我不知道的，我想应该不会几天或者一周就能完成。</p>
 <p>我认为这种很长的综述，是一个小组一起看论文，然后组会分享，经过大家共同的努力完成的。我还没有亲眼见识过科研很厉害的人，那种能够放下其他一切事情，沉入到课题中去，或者是效率很高，能够短时间了解接触的一个新领域，并迅速做出成果的人。我也还没有开过组会，只是听说过组会便是分享自己一周所作的工作，但是，我觉得组会还是很有作用的，便不展开阐述了。</p>
 <p>回到我自己的处境来，我该如何写好我的这篇综述呢？以往写的综述，基本是从网上到处找内容复制粘贴，拼拼凑凑成一篇论文，这样写出来的东西肯定是不行的。后来找过英文综述，然后翻译成中文，其实这样也不妥。一来算是抄袭；二来只是照搬别人的思想，没有自己的理解，况且一般英文综述都比较长，只能挑其中的一部分来翻译，最后得到的综述也不完整。</p>
 <p>所以，现在得出的结论为，想要在有限的，短短几天的时间内，写出一篇看起来还不错的综述，只好先理解别人写好的综述，再按照自己的想法重新组织内容，写出自己的综述。因为时间有限，且自己目前阅读文献的速度不够快，只看些综述便是极限了，如果时间再宽一点点，或许看些论文的摘要也会有用。然后要想写好，还是得自己来组织内容才是，毕竟抄袭始终不是正途。</p>
