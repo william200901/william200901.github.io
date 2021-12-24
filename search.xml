@@ -464,4 +464,33 @@
         <tag>data mine</tag>
       </tags>
   </entry>
+  <entry>
+    <title>摄影学习</title>
+    <url>/2021/12/24/photography/</url>
+    <content><![CDATA[<h2 id="摄影后期"><a href="#摄影后期" class="headerlink" title="摄影后期"></a>摄影后期</h2><h3 id="八大影调"><a href="#八大影调" class="headerlink" title="八大影调"></a>八大影调</h3><p>绘画七大组成元素：点、线、面、空间、质地、明暗、色彩</p>
+<p>数码后期：修改明暗、色彩</p>
+<h4 id="明暗"><a href="#明暗" class="headerlink" title="明暗"></a>明暗</h4><p>圆如何变成一个球？通过明暗光照对比，使其显出立体感。</p>
+<p>明暗分高、中间调、暗调</p>
+<p><code>高调</code>：清爽、明快</p>
+<p><code>中间调</code>：静谧、柔和</p>
+<p><code>暗调</code>：深沉、压抑</p>
+<p>光比：一张照片亮部与暗部的受光比例，即最亮的部分与最暗的部分的光强比</p>
+<p><code>硬调</code>：明暗反差较大</p>
+<p><code>软调</code>：明暗反差不大，比较柔和</p>
+<h4 id="色彩"><a href="#色彩" class="headerlink" title="色彩"></a>色彩</h4><p>色彩的三个属性：色相、明度、纯度</p>
+<p>色彩饱和度：即色彩的鲜艳程度，也称纯度。饱和度为0时就变成灰色</p>
+<p><code>纯调</code> vs <code>灰调</code>：代表整体画面的饱和，饱和高的为纯调，饱和低的为灰调</p>
+<p><code>冷调</code> vs <code>暖调</code>：冷调指画面总体颜色偏青蓝紫，暖调指整体画面偏红橙黄</p>
+<p><code>调和调</code> vs <code>对比调</code>：画面配色方法。下图色相环中，相距120°~180°的颜色为对比色，反差强烈；相距60°内的颜色为调和色，反差较小，较柔和</p>
+<p><img src="/2021/12/24/photography/photography1.png"></p>
+<h3 id="塑造画面层次"><a href="#塑造画面层次" class="headerlink" title="塑造画面层次"></a>塑造画面层次</h3><p>层次源于对比。灰度（黑白灰）的对比，色彩（色相，饱和，明暗）的对比。</p>
+<p>灰度对比：黑白对比较强，人物与背景灰度的对比来突出人物</p>
+<p>冷暖对比：人物照中，人物暖色，背景冷色，突出人物</p>
+<p>白平衡：</p>
+<p>曲线、分离色调：</p>
+<p>HSL：调色，固有色调整</p>
+<p>修片：camera row 修70%，PS修20%~30%</p>
+<p>饱和对比：饱和度高的更突出，饱和度低的则较不显眼</p>
+]]></content>
+  </entry>
 </search>
