@@ -206,7 +206,7 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo new &lt;postname&gt;</span><br></pre></td></tr></table></figure>
 <p>就可以在<code>hexo/source/_posts</code> 文件夹下新建一个<code>.md</code>文件，即markdown文件，写博客只需本地编辑该文件。</p>
 <p>将本地更新上传到GitHub上，使用命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo clean &amp;&amp; hexo g $$ hexo deploy</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure>
 
 <h2 id="3-写博客遇到的坑"><a href="#3-写博客遇到的坑" class="headerlink" title="3.写博客遇到的坑"></a>3.写博客遇到的坑</h2><ol>
 <li>md文件最上的title内容不能带引号，否则会出错</li>
